@@ -1,0 +1,23 @@
+.linkMenu {
+  margin: 0 0 40px;
+}
+
+.linkMenu > ul {
+  list-style: none;
+}
+
+.linkMenu > p {
+  margin: 0 0 8px;
+  font: var(--label-M);
+  color: #00000080; /* TODO: define color scheme */
+}
+
+.linkMenu > ul > li {
+  margin: 0 0 8px;
+  font: var(--text-M);
+  font-weight: 500;
+}
+
+.linkMenu > ul > li > a:hover {
+  text-decoration: underline;
+}
