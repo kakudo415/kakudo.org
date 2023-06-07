@@ -1,23 +1,23 @@
-.linkMenu {
+.link-menu {
   margin: 0 0 40px;
 }
 
-.linkMenu > ul {
+.link-menu > ul {
   list-style: none;
 }
 
-.linkMenu > p {
+.link-menu > p {
   margin: 0 0 8px;
   font: var(--label-M);
   color: #00000080; /* TODO: define color scheme */
 }
 
-.linkMenu > ul > li {
+.link-menu > ul > li {
   margin: 0 0 8px;
   font: var(--text-M);
-  font-weight: 500;
+  font-weight: bold;
 }
 
-.linkMenu > ul > li > a:hover {
+.link-menu > ul > li > a:hover {
   text-decoration: underline;
 }

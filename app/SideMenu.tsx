@@ -4,7 +4,7 @@ import styles from "./SideMenu.module.css"
 
 export function LinkMenu({ header, links }: { header?: string, links: { text: string, url: string }[] }) {
   return (
-    <div className={styles.linkMenu}>
+    <div className={styles['link-menu']}>
       {header && <p>{header}</p>}
       <ul>
         {links.map((link, index) => (
