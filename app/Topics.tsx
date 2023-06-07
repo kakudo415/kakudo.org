@@ -1,3 +1,7 @@
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+
 import Link from "next/link"
 
 import styles from "./Topics.module.css"
@@ -17,14 +21,52 @@ export function TopicList({ topics }: { topics: { title: string, description: st
   )
 }
 
+const contentDirectory = path.join(process.cwd(), 'content')
+
+const getFiles = (rootDir: string) => {
+  const _getFiles = (dir: string) => {
+    let files: string[] = []
+    for (const child of fs.readdirSync(path.join(rootDir, dir), { withFileTypes: true })) {
+      if (child.isDirectory()) {
+        files.push(..._getFiles(path.join(dir, child.name)))
+      }
+      if (child.isFile()) {
+        files.push(`${dir}/${child.name}`)
+      }
+    }
+    return files
+  }
+  return _getFiles('/')
+}
+
 export function Topics({ className }: { className: string }) {
+  const files = getFiles(contentDirectory)
+  const topics = files.filter(file => {
+    const match = file.match(/\.md$/)
+    return match != null
+  }).map(file => {
+    const filename = file.replace(/\.md$/, '')
+    const content = fs.readFileSync(path.join(contentDirectory, file), 'utf8')
+    const { data } = matter(content)
+    const date = new Date(data.date)
+    return {
+      title: data.title,
+      description: data.description,
+      url: filename,
+      date: date,
+    }
+  })
+  topics.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1
+    } else {
+      return -1
+    }
+  })
+
   return (
     <main className={className}>
-      <TopicList topics={[
-        { title: '透過ウィンドウの裏にあるChromeが動画を描画しないときの対処法', description: 'Windows Terminalを透明にして裏でYouTubeでも見ようとしたら描画されなかったのでフラグを切り替えて対処した話', url: '/2023/05/disable-chrome-background-invisibility-feature' },
-        { title: '研究室PCにCloudflare TunnelsでSSHする', description: '学内ネットワークの研究室PCに、Cloudflare Tunnelsを利用してSSHした備忘録', url: '/2023/05/lab-network-tunneling' },
-        { title: 'ATOK 設定備忘録', description: 'ATOKの設定備忘録です', url: '/2023/05/atok-settings' },
-      ]}/>
+      <TopicList topics={topics}/>
     </main>
   )
 }
