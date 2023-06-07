@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 64px 0;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 64px auto;
+  gap: 32px;
+}
+
+.container > * {
+  word-break: break-all;
+}
+
+.container > header {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.container > .content {
+  grid-column: 1 / 10;
+  grid-row: 2 / 3;
+}
+
+.container > .site-menu {
+  grid-column: 10 / 13;
+  grid-row: 1 / 3;
+}

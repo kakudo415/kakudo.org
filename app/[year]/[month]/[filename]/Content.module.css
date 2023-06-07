@@ -1,0 +1,18 @@
+.content > h1 {
+  margin: 0 0 24px;
+  font: var(--header-L);
+}
+
+.content > h2 {
+  margin: 64px 0 24px;
+  font: var(--header-M);
+}
+
+.content > h3 {
+  margin: 40px 0 24px;
+  font: var(--header-S);
+}
+
+.content > p {
+  margin: 16px 0px;
+}
