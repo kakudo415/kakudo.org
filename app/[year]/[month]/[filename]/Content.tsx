@@ -6,7 +6,7 @@ import rehypeRaw from 'rehype-raw'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {vscDarkPlus} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-import styles from './Content.module.css'
+import styles from './Content.module.scss'
 
 export function Content({ className, property, content }: { className: string, property: { [key: string]: any }, content: string }) {
   return (

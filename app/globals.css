@@ -1,40 +1,11 @@
 :root {
   letter-spacing: 0.04em;
-
-  --max-width: 1024px;
-
-  --foreground: #000000CC;
-  --background: #FFFFFF;
-
-  --font: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
-
-  --header-L: 400 36px / 1.4 var(--font);
-  --header-L-mobile: 500 32px / 1.5 var(--font);
-  --header-M: 400 32px / 1.5 var(--font);
-  --header-M-mobile: 500 28px / 1.5 var(--font);
-  --header-S: 400 28px / 1.5 var(--font);
-  --header-S-mobile: 500 24px / 1.5 var(--font);
-  --header-XS: 400 24px / 1.5 var(--font);
-  --header-XS-mobile: 500 20px / 1.5 var(--font);
-  --header-XXS: 400 20px / 1.5 var(--font);
-  --header-XXS-mobile: 500 16px / 1.7 var(--font);
-
-  --text-L: 16px / 1.7 var(--font);
-  --text-M: 14px / 1.7 var(--font);
-
-  --label-L: 500 14px / 1.5 var(--font);
-  --label-M: 500 12px / 1.5 var(--font);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  color: var(--foreground);
-  font: var(--text-L);
 }
 
 a {

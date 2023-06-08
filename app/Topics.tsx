@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 
 import Link from "next/link"
 
-import styles from "./Topics.module.css"
+import styles from "./Topics.module.scss"
 
 export function TopicList({ topics }: { topics: { title: string, description: string, url: string }[] }) {
   return (

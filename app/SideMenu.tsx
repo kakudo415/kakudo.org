@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import styles from "./SideMenu.module.css"
+import styles from "./SideMenu.module.scss"
 
 export function LinkMenu({ header, links }: { header?: string, links: { text: string, url: string }[] }) {
   return (

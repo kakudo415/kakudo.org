@@ -1,3 +1,5 @@
+@use 'common';
+
 .link-menu {
   margin: 0 0 40px;
 }
@@ -8,13 +10,13 @@
 
 .link-menu > p {
   margin: 0 0 8px;
-  font: var(--label-M);
+  font: common.$label-M;
   color: #00000080; /* TODO: define color scheme */
 }
 
 .link-menu > ul > li {
   margin: 0 0 8px;
-  font: var(--text-M);
+  font: common.$text-M;
   font-weight: bold;
 }
 

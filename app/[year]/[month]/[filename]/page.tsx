@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import Header from '../../../Header'
 import { HomeMenu, SiteMenu } from '../../../SideMenu'
 import { Content } from './Content'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 
 const contentDirectory = path.join(process.cwd(), 'content')
 

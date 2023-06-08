@@ -1,9 +1,0 @@
-.inner {
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-.inner > h1 {
-  font: var(--header-S);
-  font-weight: bold;
-}

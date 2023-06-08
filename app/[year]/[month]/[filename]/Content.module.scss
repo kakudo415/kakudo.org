@@ -1,16 +1,18 @@
+@use './../../../common';
+
 .content > h1 {
   margin: 0 0 24px;
-  font: var(--header-L);
+  font: common.$header-L;
 }
 
 .content > h2 {
   margin: 64px 0 24px;
-  font: var(--header-M);
+  font: common.$header-M;
 }
 
 .content > h3 {
   margin: 40px 0 24px;
-  font: var(--header-S);
+  font: common.$header-S;
 }
 
 .content > p {

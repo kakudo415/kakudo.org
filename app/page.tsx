@@ -1,6 +1,6 @@
 import Header from './Header'
 import { Topics } from './Topics'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import { HomeMenu, SiteMenu } from './SideMenu'
 
 // Layout component
