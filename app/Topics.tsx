@@ -39,7 +39,7 @@ const getFiles = (rootDir: string) => {
   return _getFiles('/')
 }
 
-export function Topics({ className }: { className: string }) {
+export function Topics() {
   const files = getFiles(contentDirectory)
   const topics = files.filter(file => {
     const match = file.match(/\.md$/)
@@ -65,7 +65,7 @@ export function Topics({ className }: { className: string }) {
   })
 
   return (
-    <main className={className}>
+    <main>
       <TopicList topics={topics}/>
     </main>
   )

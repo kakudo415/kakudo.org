@@ -7,10 +7,18 @@ import { HomeMenu, SiteMenu } from './SideMenu'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Header className={styles['header']} />
-      <HomeMenu className={styles['home-menu']} />
-      <Topics className={styles['topics']} />
-      <SiteMenu className={styles['site-menu']} />
+      <div className={styles['header']}>
+        <Header />
+      </div>
+      <div className={styles['home-menu']}>
+        <HomeMenu />
+      </div>
+      <div className={styles['topics']}>
+        <Topics />
+      </div>
+      <div className={styles['site-menu']}>
+        <SiteMenu />
+      </div>
     </div>
   )
 }

@@ -17,9 +17,9 @@ export function LinkMenu({ header, links }: { header?: string, links: { text: st
   )
 }
 
-export function HomeMenu({ className }: { className: string }) {
+export function HomeMenu() {
   return (
-    <div className={className}>
+    <div>
       <LinkMenu header='Sites' links={[
         { text: 'kakudo415.com', url: 'https://kakudo415.com' },
         { text: 'kakudokentaro.com', url: 'https://kakudokentaro.com' },
@@ -28,9 +28,9 @@ export function HomeMenu({ className }: { className: string }) {
   )
 }
 
-export function SiteMenu({ className }: { className: string }) {
+export function SiteMenu() {
   return (
-    <div className={className}>
+    <div>
       <LinkMenu links={[
         { text: '自己紹介 / About', url: '/about' },
         { text: '履歴書 / Resume', url: '/resume' },

@@ -8,9 +8,9 @@ import {vscDarkPlus} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import styles from './Content.module.scss'
 
-export function Content({ className, property, content }: { className: string, property: { [key: string]: any }, content: string }) {
+export function Content({ property, content }: { property: { [key: string]: any }, content: string }) {
   return (
-    <main className={`${className} ${styles.content}`}>
+    <main className={styles.content}>
       <h1>{ property.title }</h1>
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}
         children={content}

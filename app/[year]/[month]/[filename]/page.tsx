@@ -16,9 +16,15 @@ export default function Page({ params }: { params: { year: number, month: number
 
   return (
     <div className={styles.container}>
-      <Header className={styles['header']} />
-      <Content className={styles['content']} property={data} content={content} />
-      <SiteMenu className={styles['site-menu']} />
+      <div className={styles['header']}>
+        <Header />
+      </div>
+      <div className={styles['content']}>
+        <Content property={data} content={content} />
+      </div>
+      <div className={styles['site-menu']}>
+        <SiteMenu />
+      </div>
     </div>
   )
 }
