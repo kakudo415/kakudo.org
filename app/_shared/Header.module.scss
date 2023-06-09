@@ -1,0 +1,11 @@
+@use 'shared';
+
+.inner {
+  margin: 0 auto;
+  max-width: shared.$max-width;
+}
+
+.inner > h1 {
+  font: shared.$header-L;
+  font-weight: bold;
+}

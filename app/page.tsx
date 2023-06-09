@@ -1,7 +1,7 @@
-import Header from './Header'
+import Header from './_shared/Header'
 import { Topics } from './Topics'
 import styles from './page.module.scss'
-import { HomeMenu, SiteMenu } from './SideMenu'
+import { HomeMenu, SiteMenu } from './_shared/SideMenu'
 
 // Layout component
 export default function Home() {

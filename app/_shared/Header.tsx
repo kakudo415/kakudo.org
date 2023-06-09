@@ -6,7 +6,6 @@ export default function Header() {
     <header>
       <div className={styles.inner}>
         <h1><Link href="/">覚道 健太郎</Link></h1>
-        <Link href="/about"></Link>
       </div>
     </header>
   )

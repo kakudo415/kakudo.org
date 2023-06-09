@@ -10,7 +10,7 @@ export function TopicList({ topics }: { topics: { title: string, description: st
   return (
     <div className={styles.topics}>
       {topics.map(topic => (
-        <div>
+        <div key={topic.title}>
           <Link href={topic.url}>
             <h3>{topic.title}</h3>
             <p>{topic.description}</p>

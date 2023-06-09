@@ -1,8 +1,8 @@
-@use './../common';
+@use './../_shared/shared';
 
 .container {
   display: grid;
-  max-width: common.$max-width;
+  max-width: shared.$max-width;
   margin: 0 auto;
   padding: 64px 0;
   grid-template-columns: repeat(12, 1fr);

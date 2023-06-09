@@ -2,8 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-import Header from '../Header'
-import { HomeMenu, SiteMenu } from '../SideMenu'
+import Header from '../_shared/Header'
+import { HomeMenu, SiteMenu } from '../_shared/SideMenu'
 import { Content } from './Content'
 import styles from './page.module.scss'
 

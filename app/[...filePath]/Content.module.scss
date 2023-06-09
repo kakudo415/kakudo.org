@@ -1,21 +1,21 @@
-@use './../common';
+@use './../_shared/shared';
 
 .content {
-  font: common.$text-L;
+  font: shared.$text-L;
 
   h1 {
     margin: 0 0 24px;
-    font: common.$header-L;
+    font: shared.$header-L;
   }
 
   h2 {
     margin: 64px 0 24px;
-    font: common.$header-M;
+    font: shared.$header-M;
   }
 
   h3 {
     margin: 40px 0 24px;
-    font: common.$header-S;
+    font: shared.$header-S;
   }
 
   p {
@@ -23,7 +23,7 @@
 
     code {
       display: inline-block;
-      font: common.$text-M;
+      font: shared.$text-M;
       font-family: monospace;
       margin: 0 2px;
       padding: 0 4px;
@@ -39,12 +39,12 @@
   }
 
   a {
-    color: common.$color-primary;
+    color: shared.$color-primary;
     text-decoration: underline;
   }
 
   a:hover {
-    color: common.$foreground;
+    color: shared.$foreground;
   }
 
   ol, ul {
@@ -62,5 +62,21 @@
       padding: 8px 16px;
       border: 1px solid #0003;
     }
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  blockquote {
+    border-left: 4px solid #0003;
+    padding-left: 16px;
+  }
+
+  p.warn {
+    padding: 1rem;
+    background: #fff8e1;
   }
 }
