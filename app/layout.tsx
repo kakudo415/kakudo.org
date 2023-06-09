@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import './globals.css'
 import { Inter, Noto_Sans_JP } from 'next/font/google'
 
@@ -13,9 +14,12 @@ const noto = Noto_Sans_JP({
   display: 'swap',
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Kakudo Kentaro',
   description: "Kakudo Kentaro's personal website.",
+  icons: {
+    icon: 'favicon.svg',
+  }
 }
 
 export default function RootLayout({
