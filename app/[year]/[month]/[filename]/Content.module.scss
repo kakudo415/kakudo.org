@@ -1,20 +1,66 @@
 @use './../../../common';
 
-.content > h1 {
-  margin: 0 0 24px;
-  font: common.$header-L;
-}
+.content {
+  font: common.$text-L;
 
-.content > h2 {
-  margin: 64px 0 24px;
-  font: common.$header-M;
-}
+  h1 {
+    margin: 0 0 24px;
+    font: common.$header-L;
+  }
 
-.content > h3 {
-  margin: 40px 0 24px;
-  font: common.$header-S;
-}
+  h2 {
+    margin: 64px 0 24px;
+    font: common.$header-M;
+  }
 
-.content > p {
-  margin: 16px 0px;
+  h3 {
+    margin: 40px 0 24px;
+    font: common.$header-S;
+  }
+
+  p {
+    margin: 16px 0px;
+
+    code {
+      display: inline-block;
+      font: common.$text-M;
+      font-family: monospace;
+      margin: 0 2px;
+      padding: 0 4px;
+      background: rgb(250, 250, 250);
+      position: relative;
+      bottom: 1px;
+      border-radius: 2px;
+    }
+  }
+
+  pre > pre {
+    border-radius: 8px;
+  }
+
+  a {
+    color: common.$color-primary;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: common.$foreground;
+  }
+
+  ol, ul {
+    padding: 0 0 0 32px;
+
+    li {
+      margin: 16px 0;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+
+    td, th {
+      padding: 8px 16px;
+      border: 1px solid #0003;
+    }
+  }
 }

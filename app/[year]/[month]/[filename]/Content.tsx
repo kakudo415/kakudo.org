@@ -15,15 +15,15 @@ export function Content({ property, content }: { property: { [key: string]: any 
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}
         children={content}
         components={{
+          // FIXME: pre > code
           code({node, inline, className, children, ...props}) {
             const match = /language-(\w+)/.exec(className || '')
-            return !inline && match ? (
+            return !inline ? (
               <SyntaxHighlighter
                 {...props}
                 style={vscDarkPlus}
                 children={String(children).replace(/\n$/, '')}
-                language={match[1]}
-                PreTag="div"
+                language={match ? match[1] : ''}
               />
             ) : (
               <code {...props} className={className}>
