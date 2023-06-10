@@ -1,12 +1,8 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import Link from 'next/link'
 
-import Link from "next/link"
+import { fetchContents } from '@/shared/content'
 
-import styles from "./Topics.module.scss"
-
-import { fetchContents } from './_shared/content'
+import styles from './Topics.module.scss'
 
 export function TopicList({ topics }: { topics: { title: string, description: string, url: string }[] }) {
   return (

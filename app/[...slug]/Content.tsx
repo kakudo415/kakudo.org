@@ -6,8 +6,8 @@ import rehypeRaw from 'rehype-raw'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
+import { Content as ContentType } from '@/shared/content'
 import styles from './Content.module.scss'
-import { Content as ContentType } from '../_shared/content'
 
 export function Content({ content }: { content: ContentType }) {
   return (

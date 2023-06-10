@@ -1,14 +1,9 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-
-import Header from '../_shared/Header'
-import { HomeMenu, SiteMenu } from '../_shared/SideMenu'
+import { Header } from '@/components/Header'
+import { SiteMenu } from '@/components/SideMenu'
 import { Content } from './Content'
-import styles from './page.module.scss'
-import { fetchContents } from '../_shared/content'
 
-const contentDirectory = path.join(process.cwd(), 'content')
+import { fetchContents } from '@/shared/content'
+import styles from './page.module.scss'
 
 export default function Page({ params }: { params: { slug: string[] } }) {
   const content = fetchContents().get(params.slug.join('/'))
