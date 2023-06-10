@@ -7,11 +7,12 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import styles from './Content.module.scss'
+import { Content as ContentType } from '../_shared/content'
 
-export function Content({ property, content }: { property: { [key: string]: any }, content: string }) {
+export function Content({ content }: { content: ContentType }) {
   return (
     <main className={styles.content}>
-      <h1>{property.title}</h1>
+      <h1>{content.frontMatter.title}</h1>
       <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}
         components={{
           // FIXME: pre > code
@@ -33,7 +34,7 @@ export function Content({ property, content }: { property: { [key: string]: any 
           }
         }}
       >
-        {content}
+        {content.content}
       </ReactMarkdown>
     </main>
   )
