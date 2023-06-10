@@ -20,14 +20,16 @@
 
   p {
     margin: 16px 0px;
+  }
 
+  p, li {
     code {
       display: inline-block;
       font: shared.$text-M;
       font-family: monospace;
       margin: 0 2px;
       padding: 0 4px;
-      background: rgb(250, 250, 250);
+      background: #00000008;
       position: relative;
       bottom: 1px;
       border-radius: 2px;
