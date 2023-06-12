@@ -1,0 +1,22 @@
+@use 'shared';
+
+nav.link-menu {
+  p {
+    margin: 0 0 0.5rem;
+    font: shared.$label-M;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 0 0 0.5rem;
+      font: shared.$text-M;
+      font-weight: bold;
+
+      :hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

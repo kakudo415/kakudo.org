@@ -1,0 +1,8 @@
+@use 'shared';
+
+header.name {
+  h1 {
+    font: shared.$header-S;
+    font-weight: bold;
+  }
+}

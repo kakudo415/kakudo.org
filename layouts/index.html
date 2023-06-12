@@ -1,0 +1,21 @@
+{{ define "extraHeads" }}
+  {{ $css := resources.Get "sass/index.scss" | resources.ToCSS (dict "transpiler" "dartsass") }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+  <div class="container">
+    <div class="name">
+      {{ partial "header.html" . }}
+    </div>
+    <div class="home-menu">
+      {{ partial "home-menu.html" . }}
+    </div>
+    <main class="content">
+
+    </main>
+    <div class="site-menu">
+      {{ partial "site-menu.html" . }}
+    </div>
+  </div>
+{{ end }}

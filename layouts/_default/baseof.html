@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if not .IsHome -}} {{- .Page.Title }} - {{ end  -}} {{- .Site.Title }}</title>
+  {{ block "extraHeads" . }}{{ end }}
+</head>
+<body>
+  {{ block "main" . }}{{ end }}
+</body>
+</html>
