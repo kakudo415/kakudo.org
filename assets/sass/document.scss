@@ -7,6 +7,10 @@ main.content {
     font-weight: bold;
   }
 
+  time {
+    color: shared.$foreground-description;
+  }
+
   h2 {
     margin: 64px 0 24px;
     font: shared.$header-M;
@@ -87,6 +91,7 @@ main.content {
   }
 
   pre {
+    margin: 16px 0;
     padding: 16px;
     border-radius: 8px;
     overflow-x: scroll;
