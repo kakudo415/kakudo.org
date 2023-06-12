@@ -11,6 +11,9 @@
     <div class="home-menu">
       {{ partial "home-menu.html" . }}
     </div>
+    <div class="site-menu">
+      {{ partial "site-menu.html" . }}
+    </div>
     <main class="topics">
       <h2>投稿一覧</h2>
       {{ range .Site.RegularPages }}
@@ -24,8 +27,5 @@
         {{ end }}
       {{ end }}
     </main>
-    <div class="site-menu">
-      {{ partial "site-menu.html" . }}
-    </div>
   </div>
 {{ end }}

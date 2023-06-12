@@ -5,6 +5,11 @@ main.content {
     margin: 0 0 24px;
     font: shared.$header-L;
     font-weight: bold;
+
+    @include shared.break('mobile') {
+      font: shared.$header-L-mobile;
+      font-weight: bold;
+    }
   }
 
   time {
@@ -14,21 +19,37 @@ main.content {
   h2 {
     margin: 64px 0 24px;
     font: shared.$header-M;
+
+    @include shared.break('mobile') {
+      font: shared.$header-M-mobile;
+    }
   }
 
   h3 {
     margin: 40px 0 24px;
     font: shared.$header-S;
+
+    @include shared.break('mobile') {
+      font: shared.$header-S-mobile;
+    }
   }
 
   h4 {
     margin: 40px 0 16px;
     font: shared.$header-XS;
+
+    @include shared.break('mobile') {
+      font: shared.$header-XS-mobile;
+    }
   }
 
   h5 {
     margin: 40px 0 24px;
     font: shared.$header-XXS;
+
+    @include shared.break('mobile') {
+      font: shared.$header-XXS-mobile;
+    }
   }
 
   p {

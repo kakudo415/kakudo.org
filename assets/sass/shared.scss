@@ -1,4 +1,18 @@
-$width: 1024px;
+$breakpoint-mobile: 520px;
+$breakpoint-tablet: 960px;
+
+$breakpoints: (
+  'mobile': 520px,
+  'tablet': 960px,
+);
+
+@mixin break($breakpoint) {
+  @media all and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+$max-width: 1024px;
 
 $foreground-body: #000C;
 $foreground-description: #000A;
