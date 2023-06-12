@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if not .IsHome -}} {{- .Page.Title }} - {{ end  -}} {{- .Site.Title }}</title>
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.svg" type="image/svg+xml">
   {{ block "extraHeads" . }}{{ end }}
 </head>
 <body>
