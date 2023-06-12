@@ -6,6 +6,10 @@ tags: ["Tips", "Chrome"]
 draft: false
 ---
 
+{{% remark "warning" %}}
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+{{% /remark %}}
+
 Windows Terminalを透明にしてYouTube見ながらプログラム書いたら最高じゃん！と思ったが、Chromeが無情にも真っ黒な再生画面を提示してくれたため。
 
 1. `chrome://flags`を開く。

@@ -6,6 +6,10 @@ tags: []
 draft: false
 ---
 
+{{% remark "warning" %}}
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+{{% /remark %}}
+
 備忘録です。
 
 ご多分に漏れず「[ぼっち・ざ・ろっく！](https://bocchi.rocks/)」のぼっちちゃんに影響されて全く弾けないくせにギターを引っ張り出してきました。

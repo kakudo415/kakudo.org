@@ -5,6 +5,10 @@ draft: false
 tags: ['Web', 'Hugo']
 ---
 
+{{% remark "warning" %}}
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+{{% /remark %}}
+
 このページを作る過程でハマったこととその対処法について書きます。
 
 ## 静的なファイルが配信されない・パスがおかしい

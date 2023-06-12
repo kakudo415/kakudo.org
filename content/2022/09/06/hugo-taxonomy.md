@@ -6,6 +6,10 @@ tags: ['Web', 'Hugo']
 draft: false
 ---
 
+{{% remark "warning" %}}
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+{{% /remark %}}
+
 ブログを書き始めて6日。だんだんHugoの気持ちがわかってきました。そろそろTaxonomy（分類）も触れたいなと感じたので、このブログに「タグ」を導入したいと思います。
 
 ## タグを設定する

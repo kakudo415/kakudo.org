@@ -1,0 +1,11 @@
+{{ $message := .Get 0 }}
+{{ if eq $message "warning" -}}
+  <div class="remark warning">
+    <span class="material-symbols-rounded">
+      warning
+    </span>
+    <span>
+      {{- .Inner | markdownify -}}
+    </span>
+  </div>
+{{- end }}

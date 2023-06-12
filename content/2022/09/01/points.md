@@ -5,6 +5,10 @@ draft: false
 tags: ['Web']
 ---
 
+{{% remark "warning" %}}
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+{{% /remark %}}
+
 どのようなことを考えながらこのサイトを作ったかを、忘れないうちに書き留めたいと思います。
 
 ## 簡素なデザインにすること

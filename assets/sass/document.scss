@@ -55,6 +55,11 @@ main.content {
   p {
     margin: 1rem 0;
   }
+  p.warn {
+    padding: 1rem;
+    background: #fff8e1;
+    border-radius: 8px;
+  }
 
   strong {
     font-weight: bold;
@@ -117,5 +122,21 @@ main.content {
     border-radius: 8px;
     overflow-x: scroll;
     font: shared.$text-M;
+  }
+
+  div.remark.warning {
+    margin: 16px 0;
+    padding: 16px;
+    background: #FFF8E1;
+    border-radius: 8px;
+    display: flex;
+
+    span.material-symbols-rounded {
+      margin-right: 8px;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 }

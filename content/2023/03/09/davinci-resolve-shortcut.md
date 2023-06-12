@@ -6,6 +6,10 @@ tags: ["Davinci Resolve"]
 draft: false
 ---
 
+{{% remark "warning" %}}
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+{{% /remark %}}
+
 Davinci Resolve のデフォルト設定（Keyboard Customization の "Davinci Resolve" プリセット）です。
 
 ## View

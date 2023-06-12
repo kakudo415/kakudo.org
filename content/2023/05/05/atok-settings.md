@@ -6,6 +6,10 @@ tags: ["ATOK"]
 draft: false
 ---
 
+{{% remark "warning" %}}
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+{{% /remark %}}
+
 - 英字配列キーボード
 - 入力履歴を覚えてほしくない派
 - Windowsが親

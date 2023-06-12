@@ -6,6 +6,10 @@ tags: ["Rust"]
 draft: false
 ---
 
+{{% remark "warning" %}}
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+{{% /remark %}}
+
 これは、[RICORA Advent Calendar 2022](https://adventar.org/calendars/7447) の **21日目** の記事です。
 
 昨日は、**remeta**さんの『[またね、サンタさん / Goodbye, Santa](https://speakerdeck.com/000meta/goodbye-santa)』でした。
