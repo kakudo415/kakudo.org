@@ -1,5 +1,5 @@
 {{ define "extraHeads" }}
-  {{ $css := resources.Get "sass/404.scss" | resources.ToCSS (dict "transpiler" "dartsass") }}
+  {{ $css := resources.Get "sass/404.scss" | resources.ToCSS (dict "transpiler" "dartsass" "outputStyle" "compressed") }}
   <link rel="stylesheet" href="{{ $css.Permalink }}">
 {{ end }}
 
