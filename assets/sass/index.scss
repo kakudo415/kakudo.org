@@ -8,7 +8,7 @@ div.container {
   width: shared.$width;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 64px auto;
+  grid-template-rows: 28px auto;
   gap: 32px;
 
   * {
