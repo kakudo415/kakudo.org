@@ -1,15 +1,13 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 $width: 1024px;
+
+$foreground-body: #000C;
+$foreground-description: #000A;
+
+$background-primary: #FFF;
+$background-secondary: #00000008;
+
+$border-divider: #0001;
+
 $font: 'Inter', 'Noto Sans JP', sans-serif;
 
 $header-L: 400 36px / 1.4 $font;
@@ -28,3 +26,19 @@ $text-M: 14px / 1.7 $font;
 
 $label-L: 500 14px / 1.5 $font;
 $label-M: 500 12px / 1.5 $font;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $foreground-body;
+  font: $text-L;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
