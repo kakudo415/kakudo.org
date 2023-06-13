@@ -14,10 +14,25 @@ nav.link-menu {
     li {
       margin: 0 0 0.5rem;
       font: shared.$text-M;
-      font-weight: bold;
 
-      :hover {
-        text-decoration: underline;
+      a {
+        min-height: 24px;
+        display: inline-flex;
+        align-items: center;
+
+        i {
+          margin: 0 4px 0 0;
+        }
+
+        span {
+          font-weight: bold;
+          line-height: 1;
+        }
+      }
+      a:hover {
+        span {
+          text-decoration: underline;
+        }
       }
     }
   }
