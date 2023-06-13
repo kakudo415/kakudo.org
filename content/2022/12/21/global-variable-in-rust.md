@@ -71,7 +71,7 @@ static GLOBAL: Mutex<Global> = Mutex::new( ... );
 
 明日は**unagi_dog**さんの『OAuth2.0まとめ』が予定されていますのでお楽しみに！
 
-<p class="warn">
-  <strong>2022-12-22追記</strong><br>
-  『OAuth2.0まとめ』は24日に引っ越しになり、同じく<strong>unagi_dog</strong>さんの『<a href="https://miso.sabanium.me/post/throwback2022/">ふりかえり2022</a>』が公開されていますので是非ご覧ください！（サイトのデザインを褒めてくれてありがとう）
-</p>
+{{% remark "info" %}}
+**2022-12-22追記**<br>
+『OAuth2.0まとめ』は24日に引っ越しになり、同じく**unagi_dog**さんの『[ふりかえり2022](https://miso.sabanium.me/post/throwback2022/)』が公開されていますので是非ご覧ください！（サイトのデザインを褒めてくれてありがとう）
+{{% /remark %}}

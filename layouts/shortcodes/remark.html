@@ -1,9 +1,17 @@
 {{ $message := .Get 0 }}
+
+{{ if eq $message "info" -}}
+  <div class="remark info">
+    <i class="ti ti-info-circle-filled"></i>
+    <span>
+      {{- .Inner | markdownify -}}
+    </span>
+  </div>
+{{- end }}
+
 {{ if eq $message "warning" -}}
   <div class="remark warning">
-    <span class="material-symbols-rounded">
-      warning
-    </span>
+    <i class="ti ti-alert-circle-filled"></i>
     <span>
       {{- .Inner | markdownify -}}
     </span>
