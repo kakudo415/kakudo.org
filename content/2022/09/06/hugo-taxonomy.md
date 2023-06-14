@@ -7,7 +7,7 @@ draft: false
 ---
 
 {{% remark "warning" %}}
-この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
+この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)について書かれたもので、内容が古いです。
 {{% /remark %}}
 
 ブログを書き始めて6日。だんだんHugoの気持ちがわかってきました。そろそろTaxonomy（分類）も触れたいなと感じたので、このブログに「タグ」を導入したいと思います。

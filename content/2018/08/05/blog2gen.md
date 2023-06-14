@@ -5,10 +5,9 @@ tags: ["Former Blog Post"]
 draft: false
 ---
 
-<p class="warn">
-  <strong>この記事は以前のブログから引っ越してきたものです！</strong><br>
-  <a href="https://github.com/kakudo415/blog">以前のブログのGitHubリポジトリ</a>
-</p>
+{{% remark "warning" %}}
+この記事は[昔のブログ](https://github.com/kakudo415/blog)から引っ越してきた古い内容です。
+{{% /remark %}}
 
 今回は新しく作ったブログシステムの紹介です  
 [dev.to](https://dev.to)を参考に高速化に全振りしてます

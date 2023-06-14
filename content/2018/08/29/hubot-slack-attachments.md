@@ -5,10 +5,9 @@ tags: ["Former Blog Post", "Slack"]
 draft: false
 ---
 
-<p class="warn">
-  <strong>この記事は以前のブログから引っ越してきたものです！</strong><br>
-  <a href="https://github.com/kakudo415/blog">以前のブログのGitHubリポジトリ</a>
-</p>
+{{% remark "warning" %}}
+この記事は[昔のブログ](https://github.com/kakudo415/blog)から引っ越してきた古い内容です。
+{{% /remark %}}
 
 こんにちは、今回はJavaScriptでSlackにリッチなメッセージをHubotを使って送りたいと思います（今回は備忘録的な記事です）  
 調べてもCoffeeScriptの情報が多かったりしてわかりにくかったので、出来たことを書いていきます  

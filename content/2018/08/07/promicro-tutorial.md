@@ -5,10 +5,9 @@ tags: ["Former Blog Post"]
 draft: false
 ---
 
-<p class="warn">
-  <strong>この記事は以前のブログから引っ越してきたものです！</strong><br>
-  <a href="https://github.com/kakudo415/blog">以前のブログのGitHubリポジトリ</a>
-</p>
+{{% remark "warning" %}}
+この記事は[昔のブログ](https://github.com/kakudo415/blog)から引っ越してきた古い内容です。
+{{% /remark %}}
 
 こんにちは Kakudo です
 今回は、タイトルの通り初めての電子工作（自作キーボード）のためにPro Microを買ったけど使い方全く分からなかったので、同じように爆死した同志達のためにメモを残したいと思います。  

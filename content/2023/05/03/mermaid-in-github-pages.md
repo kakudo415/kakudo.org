@@ -6,10 +6,6 @@ tags: ["GitHub Pages", "Mermaid"]
 draft: false
 ---
 
-{{% remark "warning" %}}
-この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
-{{% /remark %}}
-
 GitHub PagesでもMermaidが使いたくなったので備忘録。単刀直入には`<header>`に以下を追加。
 
 ```html

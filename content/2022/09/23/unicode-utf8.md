@@ -6,10 +6,6 @@ tags: ["Rust"]
 draft: false
 ---
 
-{{% remark "warning" %}}
-この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
-{{% /remark %}}
-
 知らなかったため備忘録です。
 
 ## UnicodeとUTF-8

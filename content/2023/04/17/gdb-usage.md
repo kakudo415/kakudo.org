@@ -6,10 +6,6 @@ tags: ["GDB"]
 draft: false
 ---
 
-{{% remark "warning" %}}
-この記事は[以前のホームページ](https://github.com/kakudo415/kakudokentaro.com)から**引っ越し**てきたもので、内容が古い可能性があります。
-{{% /remark %}}
-
 最近、[低レイヤを知りたい人のためのCコンパイラ作成入門](https://www.sigbus.info/compilerbook)を写経しています。
 模範コードが常にあるわけではないので当然バグらせまくっているわけですが、アセンブリを出力するこの手のプログラムはなかなかデバッグが難しいです。
 そこで重い腰をあげてGDBに挑戦してみたので備忘録です。
