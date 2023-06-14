@@ -12,6 +12,8 @@ main.content {
   }
 
   time {
+    display: block;
+    margin: 16px 0 64px;
     color: shared.$foreground-description;
   }
 
