@@ -2,6 +2,8 @@ baseURL = 'https://kakudo.org/'
 languageCode = 'ja'
 title = '覚道健太郎'
 
+disableKinds = ['section', 'taxonomy', 'term']
+
 [markup]
   [markup.highlight]
     style = 'onedark'
