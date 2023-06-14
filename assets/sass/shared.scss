@@ -49,8 +49,18 @@ $label-M: 500 12px / 1.5 $font;
 }
 
 body {
+  padding: 0 40px;
   color: $foreground-body;
   font: $text-L;
+
+  @include break('tablet') {
+    display: block;
+    padding: 0 32px;
+  }
+
+  @include break('mobile') {
+    padding: 0 16px;
+  }
 }
 
 a {
