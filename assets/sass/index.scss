@@ -70,6 +70,10 @@ main.topics {
     border: 1px solid shared.$border-divider;
     border-radius: 8px;
 
+    h3 {
+      font: shared.$header-XXS;
+    }
+
     p {
       margin: 8px 0 0;
     }

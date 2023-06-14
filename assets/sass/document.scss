@@ -3,13 +3,11 @@
 
 main.content {
   h1 {
-    margin: 0 0 24px;
+    margin: 64px 0 24px;
     font: shared.$header-L;
-    font-weight: bold;
 
     @include shared.break('mobile') {
       font: shared.$header-L-mobile;
-      font-weight: bold;
     }
   }
 

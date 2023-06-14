@@ -52,6 +52,7 @@ body {
   padding: 0 40px;
   color: $foreground-body;
   font: $text-L;
+  letter-spacing: 0.04em;
 
   @include break('tablet') {
     display: block;
