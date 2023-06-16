@@ -2,8 +2,6 @@ baseURL = 'https://kakudo.org/'
 languageCode = 'ja'
 title = '覚道健太郎'
 
-pluralizelisttitles = false
-
 [markup]
   [markup.highlight]
     style = 'onedark'
@@ -15,3 +13,5 @@ pluralizelisttitles = false
 
 [permalinks]
   blog = '/blog/:filename/'
+
+[taxonomies]

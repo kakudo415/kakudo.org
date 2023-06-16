@@ -2,11 +2,7 @@
   <ol>
     {{ range .Ancestors.Reverse }}
       <li>
-        {{ if .IsHome }}
-          <a href="{{ .Permalink }}">Home</a>
-        {{ else }}
-          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-        {{ end }}
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
         <span>&gt;</span>
       </li>
     {{ end }}
