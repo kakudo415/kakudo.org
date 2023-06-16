@@ -42,7 +42,7 @@ div.container {
 
   div.site-menu {
     grid-column: 10 / 13;
-    grid-row: 2 / 3;
+    grid-row: 1 / 3;
 
     @include shared.break('tablet') {
       margin: 32px 0 0;
