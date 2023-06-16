@@ -14,13 +14,14 @@ draft: false
 また2018年8月時点での情報ですので（hubot-slack version 4.5.4）、未来からご覧の方はうまく動かない可能性があります
 ## データ構造
 hubot-slackは所定の形のObjectを渡してやることで、通常の使用では使えないリッチな表現をすることができます（attachments）  
-<pre><code>let msg = new Object;  
+```
+let msg = new Object;  
 msg = {
   attachments: [ // 配列なので注意！複数同時に送れます
     {
       title: "太字になり最初の記載されます",
       text: "本文です",
-      fields: [ // フィールドも配列です、複数化
+      fields: [ // フィールドも配列です、複数可
         {
           title: "フィールドのタイトルです",
           value: "フィールドの内容",
@@ -29,13 +30,16 @@ msg = {
       ]
     }
   ]
-}</code></pre>
+}
+```
 
 全て書いていませんがこのようにattachments配列の中に書いていくことでデザインが可能です  
 さらに知りたい方は[Slack Attachments](https://api.slack.com/docs/message-attachments)をご覧ください  
 
 ## Slackに投稿する
-<pre><code>robot.send({room: '送り先のチャンネル名'}, msg);</code></pre>
+```
+robot.send({room: '送り先のチャンネル名'}, msg);
+```
 
 このようにObjectを使ってチャンネルを指定して投稿できます
 

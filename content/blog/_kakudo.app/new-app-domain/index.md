@@ -11,7 +11,7 @@ draft: false
 
 こんにちは！今日は自分の新しいドメイン [kakudo.app](//kakudo.app) についてです  
 ## ほかのドメインと何が違うのか？
-.appは今年(2018)の5月から運用が開始されたGoogle謹製の新作TLDです  
+**.app**は今年(2018)の5月から運用が開始されたGoogle謹製の新作TLDです  
 Googleが当時過去最高の2500万ドル(約30億円)で競り落としたことで話題にもなりました  
 しかし、appドメインが他と違うのは落札額だけではありません  
 サイトをHTTPS化するのが **強制** です(HTTP Strict Transport Security)  
@@ -27,27 +27,39 @@ Let's Encryptとは、HTTPS接続をするために必要なSSL証明書を無�
 
 ## やってみる
 ### Let's Encryptのアクセスへの準備
-まずは通常の通常のHTTPで認証用のアクセスを受け付ける準備をします(/etc/nginx/conf.d/hogehoge.conf内に追記)
-<pre><code>server {
+まずは通常の通常のHTTPで認証用のアクセスを受け付ける準備をします(`/etc/nginx/conf.d/hogehoge.conf`内に追記)
+
+```
+server {
 	listen 80;
 	listen [::]:80;  
-	server\_name kakudo.app;  
+	server_name kakudo.app;  
 	location / {
-		return 301 https://$server\_name$request\_uri;
+		return 301 https://$server_name$request_uri;
 	}  
 	location /.well-known/acme-challenge/ {
 		root /var/www/letsencrypt;
 	}
-}</code></pre>
+}
+```
 
 この次に誤字脱字などが無いか、テストコマンドを実行します
-<pre><code>sudo nginx -t</code></pre>
+
+```
+sudo nginx -t
+```
 
 成功したら次のコマンドでnginxを再読み込みします(エラーが出たら間違いがないか確認してください)
-<pre><code>sudo nginx -s reload</code></pre>
+
+```
+sudo nginx -s reload
+```
 
 ### コマンド実行で証明書を発行する
-<pre><code>sudo letsencrypt certonly --webroot -w /var/www/letsencrypt/ -d kakudo.app</code></pre>
+
+```
+sudo letsencrypt certonly --webroot -w /var/www/letsencrypt/ -d kakudo.app
+```
 
 .appは無印HTTPを受け付けないと聞いていたので（Googleの中の人もそういってた、詳細は後述）  
 ここはエラーが出てその解決策をブログのネタにしようかと企んでいたのですが、あっさり通りました  
@@ -56,14 +68,16 @@ Let's Encryptとは、HTTPS接続をするために必要なSSL証明書を無�
 
 ### できた証明書を設定しよう
 さっきの **hogehoge.conf** 内の **server {}** の外に以下を追記してください
-<pre><code>server {
+```
+server {
 	listen 443 ssl http2;
 	listen [::]:443 ssl http2;  
-	server\_name kakudo.app;  
-	ssl\_certificate /etc/letsencrypt/live/kakudo.app/fullchain.pem;
-	ssl\_certificate_key /etc/letsencrypt/live/kakudo.app/privkey.pem;  
+	server_name kakudo.app;  
+	ssl_certificate /etc/letsencrypt/live/kakudo.app/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/kakudo.app/privkey.pem;  
 	# お好みで location などの設定を追加してください
-}</code></pre>
+}
+```
 
 この後テストコマンドと再読み込みをすれば設定は完了です  
 お疲れさまでした  
