@@ -63,6 +63,20 @@ main.topics {
     color: shared.$foreground-description;
   }
 
+  p.year-header {
+    margin: 0 0 16px;
+    font: shared.$label-L;
+    font-weight: bold;
+    color: shared.$foreground-description;
+  }
+
+  p.month-header {
+    margin: 0 0 16px;
+    font: shared.$label-L;
+    font-weight: bold;
+    color: shared.$foreground-description;
+  }
+
   a.topic {
     display: block;
     margin: 0 0 32px;
@@ -81,16 +95,5 @@ main.topics {
 
   a:hover {
     background: shared.$background-secondary;
-  }
-
-  a.read-more {
-    display: block;
-    margin: 0 0 32px;
-    padding: 16px;
-    border: 1px solid shared.$border-divider;
-    border-radius: 8px;
-    text-align: center;
-    font: shared.$label-M;
-    color: shared.$foreground-description;
   }
 }

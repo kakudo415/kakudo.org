@@ -1,0 +1,40 @@
+{{ define "extraHeads" }}
+  {{ $css := resources.Get "sass/list.scss" | resources.ToCSS (dict "transpiler" "dartsass" "outputStyle" "compressed") | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+  <div class="container">
+    <div class="name">
+      {{ partial "header.html" . }}
+    </div>
+    <div class="home-menu">
+      {{ partial "home-menu.html" . }}
+    </div>
+    <div class="site-menu">
+      {{ partial "site-menu.html" . }}
+    </div>
+    <main class="topics">
+      <h2>投稿一覧</h2>
+      {{ $blog := where .Site.RegularPages "Section" "blog" }}
+      {{ range $blog.GroupByDate "2006" }}
+        <section class="yearly">
+          <p class="year-header">{{ .Key }}年</p>
+          {{ range .Pages.GroupByDate "1"}}
+            <section class="monthly">
+              <p class="month-header">{{ .Key }}月</p>
+              {{ range .Pages }}
+                <a href="{{ .Permalink }}" class="topic">
+                  <h3>{{ .Title }}</h3>
+                  {{ with .Params.Description }}
+                    <p>{{ . }}</p>
+                  {{ end }}
+                </a>
+              {{ end }}
+            </section>
+          {{ end }}
+        </section>
+      {{ end }}
+    </main>
+  </div>
+{{ end }}
