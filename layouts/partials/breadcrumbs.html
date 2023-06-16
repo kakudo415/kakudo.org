@@ -1,0 +1,17 @@
+<nav class="breadcrumbs">
+  <ol>
+    {{ range .Ancestors.Reverse }}
+      <li>
+        {{ if .IsHome }}
+          <a href="{{ .Permalink }}">Home</a>
+        {{ else }}
+          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
+        <span>&gt;</span>
+      </li>
+    {{ end }}
+    <li>
+      {{ .LinkTitle }}
+    </li>
+  </ol>
+</nav>

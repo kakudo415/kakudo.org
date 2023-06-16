@@ -9,6 +9,7 @@
       {{ partial "header.html" . }}
     </div>
     <main class="content">
+      {{ partial "breadcrumbs.html" . }}
       <h1>{{ .Title }}</h1>
       {{ if not .Params.independent }}
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年 1月 2日" }}</time>

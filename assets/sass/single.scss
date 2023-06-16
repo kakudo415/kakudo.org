@@ -1,6 +1,7 @@
 @use 'shared';
 @use 'partials/header';
 @use 'partials/link-menu'; // home-menu, site-menu
+@use 'partials/breadcrumbs';
 @use 'document';
 
 div.container {

@@ -1,0 +1,20 @@
+@use 'shared';
+
+main.content nav.breadcrumbs {
+  ol {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    li {
+      margin: 0;
+      font: shared.$text-M;
+      display: flex;
+
+      span {
+        margin: 0 8px;
+      }
+    }
+  }
+}
