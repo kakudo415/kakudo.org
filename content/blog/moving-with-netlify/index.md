@@ -26,36 +26,29 @@ Blueskyが流行りはじめて数か月経ちましたね。
 
 `_redirects`というファイルをプロジェクトのルートに置くことでリダイレクトが可能です。
 
-フォーマットは、リダイレクト元、先、オプションを順にスペース区切りで並べます。
+フォーマットは、**リダイレクト元**、**先**、**オプション**を順にスペース区切りで並べます。
 
-たとえば、旧[kakudokentaro.com](https://kakudokentaro.com/)からのリダイレクト設定は以下のようになっています。
-
-```
-/       https://kakudo.org/       301!
-/about/ https://kakudo.org/about/ 301!
-/blog/* https://kakudo.org/:splat 301!
-```
+たとえば、旧[kakudokentaro.com](https://kakudokentaro.com/)からのリダイレクト設定を簡単に書くと以下のようになります。
 
 ```
-/       https://kakudo.org/       301!
-/about/ https://kakudo.org/about/ 301!
+/       https://kakudo.org/            301!
+/about/ https://kakudo.org/about/      301!
+/blog/* https://kakudo.org/blog/:splat 301!
 ```
 
-この行は`/`･`/about/`に来たアクセスを`kakudo.org`にステータスコード301でリダイレクトします。最後の`!`は強制リダイレクトを表していて、たとえ既存のサイトに該当ページが存在してもリダイレクトを行います。今回は引っ越しが目的なので旧サイトのページは無視してもらう必要があります。
+```
+/       https://kakudo.org/            301!
+/about/ https://kakudo.org/about/      301!
+```
+
+この行は`/`･`/about/`に来たアクセスを`kakudo.org`にステータスコード301でリダイレクトしています。最後の`!`は強制リダイレクトを表していて、たとえ既存のサイトに該当ページが存在してもリダイレクトを行います。今回は引っ越しが目的なので旧サイトのページは無視してもらう必要があります。
 
 ```
-/blog/* https://kakudo.org/:splat 301!
+/blog/* https://kakudo.org/:splat      301!
 ```
 
 既存ページをすべてリストアップして、ひとつひとつ対応付けてももちろん良いのですが、あまりに面倒なのでまとめて設定する方法が用意されています。
 それが[Splats](https://docs.netlify.com/routing/redirects/redirect-options/#splats)で、`*`でマッチした文字列を`:splat`に展開できます。
-
-僕のサイトの場合、たとえば以下のようになります。
-
-| 旧サイト                                                                                           | 新サイト                                                                   |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `/blog/*`                                                                                          | `kakudo.org/:splat`                                                        |
-| [kakudokentaro.com/blog/**2022/09/01/points/**](https://kakudokentaro.com/blog/2022/09/01/points/) | [kakudo.org/**2022/09/01/points/**](https://kakudo.org/2022/09/01/points/) |
 
 [Redirects and rewrites | Netlify Docs](https://docs.netlify.com/routing/redirects/)
 
