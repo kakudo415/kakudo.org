@@ -2,6 +2,7 @@
 title: "ATOK 設定備忘録"
 date: 2023-05-05T14:19:27+09:00
 tags: ["ATOK"]
+thumbnail: "return-history.png"
 draft: false
 ---
 

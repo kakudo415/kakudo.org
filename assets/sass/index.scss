@@ -62,16 +62,23 @@ main.topics {
   a.topic {
     display: block;
     margin: 0 0 32px;
-    padding: 16px;
     border: 1px solid shared.$border-divider;
     border-radius: 8px;
+    overflow: hidden;
+
+    img.thumbnail {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
 
     h3 {
+      padding: 16px;
       font: shared.$header-XXS;
     }
 
     p {
-      margin: 8px 0 0;
+      padding: 0 16px 16px;
     }
   }
 

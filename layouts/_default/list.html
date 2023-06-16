@@ -25,6 +25,9 @@
               <p class="month-header">{{ .Key }}月</p>
               {{ range .Pages }}
                 <a href="{{ .Permalink }}" class="topic">
+                  {{ if .Params.thumbnail }}
+                    <img class="thumbnail" src="{{ .Permalink }}{{ .Params.thumbnail }}" alt="Thumbnail">
+                  {{ end }}
                   <h3>{{ .Title }}</h3>
                   {{ with .Params.Description }}
                     <p>{{ . }}</p>
