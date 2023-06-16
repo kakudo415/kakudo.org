@@ -1,7 +1,6 @@
 ---
 title: "ATOK 設定備忘録"
 date: 2023-05-05T14:19:27+09:00
-description: "ATOKの設定備忘録です"
 tags: ["ATOK"]
 draft: false
 ---

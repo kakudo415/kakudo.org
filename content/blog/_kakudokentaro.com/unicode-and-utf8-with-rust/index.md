@@ -1,7 +1,6 @@
 ---
 title: "UnicodeとUTF-8の違い、Rustでの扱いも"
 date: 2022-09-23T02:18:08+09:00
-description: ""
 tags: ["Rust"]
 draft: false
 ---

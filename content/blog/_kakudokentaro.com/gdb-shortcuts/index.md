@@ -1,7 +1,6 @@
 ---
 title: "GDB 使い方備忘録"
 date: 2023-04-17T15:05:50+09:00
-description: "GDBの忘れそうなコマンドを書き留めておく"
 tags: ["GDB"]
 draft: false
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Davinci Resolve キーボードショートカット備忘録"
 date: 2023-03-09T17:18:10+09:00
-description: "Davinci Resolveのよく使いそうなキーボードショートカットをまとめておく"
 tags: ["Davinci Resolve"]
 draft: false
 ---

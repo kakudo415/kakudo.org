@@ -1,7 +1,6 @@
 ---
 title: "MermaidをGithub Pagesでも使う"
 date: 2023-05-03T20:15:08+09:00
-description: "MermaidをGithub Pagesでも使う"
 tags: ["GitHub Pages", "Mermaid"]
 draft: false
 ---
