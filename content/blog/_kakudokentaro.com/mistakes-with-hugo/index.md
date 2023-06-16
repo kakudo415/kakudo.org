@@ -31,7 +31,7 @@ Trailing Slashは無いのが好みなのですが、天下のW3Cのブログ（
 
 当初は問題なくページを閲覧できるのに、しばらくすると404になり、設定したはずのCustom domainが消えているという症状です。
 
-![Custom domain disappeared](../custom-domain-disappeared.png)
+![Custom domain disappeared](custom-domain-disappeared.png)
 
 原因は、Custom domain設定時に自動的に追加された`CNAME`ファイルを、GitHub Actionsが消し飛ばしてしまったからでした。
 新しい公開ファイルで`gh-pages`ブランチを更新するときに、`CNAME`ファイルごと置き換えてしまっているわけです。

@@ -22,7 +22,7 @@ draft: false
 - AmpliTubeでは、INPUTもOUTPUTも正常に振れる
 - MOTU M2では、OUTが振れず音も出ない
 
-![設定画面](../option.png)
+![設定画面](option.png)
 
 ## 解決策
 

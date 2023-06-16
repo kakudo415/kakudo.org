@@ -12,3 +12,6 @@ disableKinds = ['section', 'taxonomy', 'term']
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true # For raw HTML
+
+[permalinks]
+  blog = '/blog/:filename/'

@@ -17,7 +17,7 @@ tags: ['Web', 'CSS']
 
 さて、おもしろそうだったのでそんな未読マークを実装してみました。まだお読みでない記事があったら[ブログ記事一覧](/blog/)を見てみてください。このように青い点が未読記事の右に表示されているはずです。（2022-09-11追記: 邪魔だったので廃止しました）
 
-![未読マーク](../unread-marker.png)
+![未読マーク](unread-marker.png)
 
 実装といっても、既読かどうかはブラウザが判断してくれるので簡単です。
 
@@ -69,11 +69,11 @@ a.unread-marker:visited::after {
 
 ブラウザの開発者ツールを確認すると正常に`display`を上書きできているように見えます。
 
-![Checking with dev tool](../checking-with-dev-tool.png)
+![Checking with dev tool](checking-with-dev-tool.png)
 
 しかし、計算済みタブを見ると、`display: none`が認識されていながら`display: block`が使われています。不思議です。
 
-![計算済みタブでおかしな挙動になる様子](../calculated.png)
+![計算済みタブでおかしな挙動になる様子](calculated.png)
 
 ### 理由
 
