@@ -1,6 +1,5 @@
+title = 'kakudo.org'
 baseURL = 'https://kakudo.org/'
-languageCode = 'ja'
-title = '覚道健太郎'
 
 [markup]
   [markup.highlight]
