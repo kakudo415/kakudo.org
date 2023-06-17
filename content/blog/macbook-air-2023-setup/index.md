@@ -154,3 +154,11 @@ SASS･SCSSを利用するために`dart-sass-embedded`が必要なので、[Rel
 ### Microsoft Outlook
 
 大学のメールアドレスで利用するため。App Storeからダウンロードするだけです。
+
+## フォント
+
+VSCodeのところで述べたCicaやHackGenに加えて、通常のフォントだとこのあたりがお気に入りです。
+
+[Inter](https://rsms.me/inter/)
+
+[Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
