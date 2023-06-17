@@ -1,5 +1,5 @@
 ---
-title: "Macbook Airの初期設定録"
+title: "MacBook Air 初期設定の記録"
 description: "MacBook Air 15\"を買ったので、この機会に初期設定を全て書き留めておく"
 thumbnail: "settings-desktop-and-dock.png"
 date: 2023-06-17T13:38:36+09:00
@@ -10,7 +10,7 @@ draft: false
 
 ## 設定の変更
 
-### Dock
+### デスクトップとDock
 
 初期設定だとただでさえ狭いラップトップの画面を大きく占有したり、最近使ったアプリを並べてたりしてきて目障りなので次のように設定します。
 
@@ -76,13 +76,15 @@ killall SystemUIServer
 
 ## 開発環境のインストール
 
-### Homebrew, Git
+### Homebrew
 
 インストール用ワンライナーが下記に書いてあるはずなので実行します。
 
 [Homebrew — The Missing Package Manager for macOS (or Linux)](https://brew.sh/)
 
-導入できたら、とりあえずGitを入れます。
+### Git
+
+Homebrewが導入できたら、とりあえずGitを入れましょう。
 
 ```sh
 brew install git
