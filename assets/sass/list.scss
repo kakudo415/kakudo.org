@@ -80,16 +80,15 @@ main.topics {
     border-radius: 8px;
     overflow: hidden;
 
-    div.thumbnail-frame {
+    picture.thumbnail {
+      display: block;
       aspect-ratio: 16 / 9;
       overflow: hidden;
 
-      picture.thumbnail {
-        img {
-          display: block;
-          height: auto;
-          width: 100%;
-        }
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
       }
     }
 

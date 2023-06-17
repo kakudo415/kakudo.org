@@ -26,15 +26,13 @@
               {{ range .Pages }}
                 <a href="{{ .Permalink }}" class="topic">
                   {{ if .Params.thumbnail }}
-                    <div class="thumbnail-frame">
-                      {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
-                      {{ $webpImage := $sourceImage.Resize "744x webp" }}
-                      {{ $resizedImage := $sourceImage.Resize "744x" }}
-                      <picture class="thumbnail">
-                        <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
-                        <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
-                      </picture>
-                    </div>
+                    {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
+                    {{ $webpImage := $sourceImage.Resize "744x webp" }}
+                    {{ $resizedImage := $sourceImage.Resize "744x" }}
+                    <picture class="thumbnail">
+                      <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
+                      <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
+                    </picture>
                   {{ end }}
                   <h3>{{ .Title }}</h3>
                   {{ with .Params.Description }}
