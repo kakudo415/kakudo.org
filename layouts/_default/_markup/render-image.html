@@ -1,6 +1,6 @@
-{{ $sourceImage := $.Page.Resources.GetMatch .Destination }}
+{{ $sourceImage := .Page.Resources.GetMatch .Destination }}
 {{ $webpImage := $sourceImage.Resize (printf "%dx%d webp" $sourceImage.Width $sourceImage.Height) }}
 <picture>
   <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
-  <img src="{{ .Destination }}" width="{{ $sourceImage.Width }}" height="{{ $sourceImage.Height }}" alt="{{ .Text }}">
+  <img src="{{ .Destination }}" width="{{ $sourceImage.Width }}" height="{{ $sourceImage.Height }}" alt="{{ .PlainText }}">
 </picture>
