@@ -66,10 +66,15 @@ main.topics {
     border-radius: 8px;
     overflow: hidden;
 
-    img.thumbnail {
-      display: block;
-      height: auto;
-      width: 100%;
+    div.thumbnail-frame {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+
+      img.thumbnail {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
     }
 
     h3 {

@@ -22,7 +22,9 @@
         {{ if not .Params.independent }}
           <a href="{{ .Permalink }}" class="topic">
             {{ if .Params.thumbnail }}
-              <img class="thumbnail" src="{{ .Permalink }}{{ .Params.thumbnail }}" alt="Thumbnail">
+              <div class="thumbnail-frame">
+                <img class="thumbnail" src="{{ .Permalink }}{{ .Params.thumbnail }}" alt="Thumbnail">
+              </div>
             {{ end }}
             <h3>{{ .Title }}</h3>
             {{ with .Params.Description }}
