@@ -70,10 +70,12 @@ main.topics {
       aspect-ratio: 16 / 9;
       overflow: hidden;
 
-      img.thumbnail {
-        display: block;
-        height: auto;
-        width: 100%;
+      picture.thumbnail {
+        img {
+          display: block;
+          height: auto;
+          width: 100%;
+        }
       }
     }
 
