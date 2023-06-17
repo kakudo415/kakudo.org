@@ -16,6 +16,10 @@ draft: false
 
 ![システム設定 デスクトップとDock](settings-desktop-and-dock.png)
 
+右下にマウスカーソルを持って行ったときにメモが出てきてしまうので無効化します。
+
+![システム設定 デスクトップとDock ホットコーナー](settings-desktop-and-dock-hot-corner.png)
+
 ### キーボード
 
 ファンクションキーはファンクションキーとして使う方が多いです。
