@@ -50,6 +50,19 @@ $label-M: 500 12px / 1.5 $font;
   padding: 0;
 }
 
+html {
+  transition: opacity 0.3s ease;
+
+  &.wf-loading {
+    opacity: 0;
+  }
+
+  &.wf-active,
+  &.wf-inactive {
+    opacity: 1;
+  }
+}
+
 body {
   padding: 0 40px;
   color: $foreground-body;
