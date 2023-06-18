@@ -1,10 +1,10 @@
 @use 'shared';
 
 nav.link-menu {
-  p {
-    margin: 0 0 0.5rem;
+  h5 {
+    margin: 0 0 1em;
+    font: shared.$label-L;
     color: shared.$foreground-description;
-    font: shared.$label-M;
   }
 
   ul {
@@ -13,25 +13,17 @@ nav.link-menu {
 
     li {
       margin: 0 0 0.5rem;
-      font: shared.$text-M;
+      font-size: 0; // remove inline-block spacing
 
       a {
-        min-height: 24px;
-        display: inline-flex;
-        align-items: center;
+        display: inline-block;
+        font: shared.$text-L;
+        font-weight: 500;
+        line-height: 24px;
+        text-decoration: underline;
 
-        i {
-          margin: 0 4px 0 0;
-        }
-
-        span {
-          font-weight: bold;
-          line-height: 1;
-        }
-      }
-      a:hover {
-        span {
-          text-decoration: underline;
+        &:hover {
+          text-decoration: none;
         }
       }
     }

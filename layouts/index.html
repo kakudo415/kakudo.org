@@ -15,10 +15,10 @@
       {{ partial "site-menu.html" . }}
     </div>
     <main class="topics">
-      <h2>最近の投稿</h2>
+      <h2>Latest posts</h2>
       {{ $blog := where .Site.RegularPages "Section" "blog" }}
-      {{ $recent := first 10 $blog }}
-      {{ range $recent }}
+      {{ $latest := first 10 $blog }}
+      {{ range $latest }}
         {{ if not .Params.independent }}
           <a href="{{ .Permalink }}" class="topic">
             {{ if .Params.thumbnail }}
@@ -37,7 +37,7 @@
           </a>
         {{ end }}
       {{ end }}
-      <a class="read-more" href="{{ .Site.BaseURL }}blog/">投稿一覧</a>
+      <a class="read-more" href="{{ .Site.BaseURL }}blog/">Previous posts</a>
     </main>
   </div>
 {{ end }}
