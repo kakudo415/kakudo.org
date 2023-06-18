@@ -15,14 +15,14 @@
       {{ partial "site-menu.html" . }}
     </div>
     <main class="topics">
-      <h2>投稿一覧</h2>
+      <h2>All posts</h2>
       {{ $blog := where .Site.RegularPages "Section" "blog" }}
       {{ range $blog.GroupByDate "2006" }}
         <section class="yearly">
-          <p class="year-header">{{ .Key }}年</p>
-          {{ range .Pages.GroupByDate "1"}}
+          <p class="year-header">{{ .Key }}</p>
+          {{ range .Pages.GroupByDate "01"}}
             <section class="monthly">
-              <p class="month-header">{{ .Key }}月</p>
+              <p class="month-header">{{ .Key }}</p>
               {{ range .Pages }}
                 <a href="{{ .Permalink }}" class="topic">
                   {{ if .Params.thumbnail }}

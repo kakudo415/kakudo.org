@@ -52,33 +52,25 @@ div.container {
 }
 
 main.topics {
-  h2 {
-    margin: 0 0 16px;
-    font: shared.$label-L;
-    font-weight: bold;
-    color: shared.$foreground-description;
-  }
 
-  p.year-header {
-    margin: 0 0 16px;
-    font: shared.$label-L;
-    font-weight: bold;
-    color: shared.$foreground-description;
-  }
-
+  h2,
+  p.year-header,
   p.month-header {
     margin: 0 0 16px;
     font: shared.$label-L;
-    font-weight: bold;
     color: shared.$foreground-description;
   }
 
   a.topic {
     display: block;
     margin: 0 0 32px;
+    background: shared.$background-tertiary;
     border: 1px solid shared.$border-divider;
     border-radius: 8px;
-    overflow: hidden;
+
+    &:hover {
+      background: shared.$background-secondary;
+    }
 
     picture.thumbnail {
       display: block;
@@ -100,9 +92,5 @@ main.topics {
     p {
       padding: 0 16px 16px;
     }
-  }
-
-  a:hover {
-    background: shared.$background-secondary;
   }
 }
