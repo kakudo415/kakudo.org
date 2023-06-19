@@ -139,9 +139,24 @@ body {
   @include break('mobile') {
     padding: 0 16px;
   }
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
+  div.container {
+    margin: 0 auto;
+    padding: 64px 0;
+    max-width: $max-width;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 64px auto;
+    gap: 32px;
+
+    @include break('tablet') {
+      display: block;
+      padding: 32px 0;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
