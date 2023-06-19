@@ -1,6 +1,7 @@
 @use 'shared';
 @use 'partials/header';
 @use 'partials/link-menu'; // home-menu, site-menu
+@use 'partials/breadcrumbs';
 
 div.container {
   margin: 0 auto;
@@ -52,13 +53,31 @@ div.container {
 }
 
 main.topics {
+  h1 {
+    margin: 64px 0 24px;
+    font: shared.$header-L;
 
-  h2,
-  p.year-header,
-  p.month-header {
-    margin: 0 0 16px;
-    font: shared.$label-L;
-    color: shared.$foreground-description;
+    @include shared.break('mobile') {
+      font: shared.$header-L-mobile;
+    }
+  }
+
+  h2.year-header {
+    margin: 40px 0 24px;
+    font: shared.$header-S;
+
+    @include shared.break('mobile') {
+      font: shared.$header-S-mobile;
+    }
+  }
+
+  h3.month-header {
+    margin: 40px 0 16px;
+    font: shared.$header-XS;
+
+    @include shared.break('mobile') {
+      font: shared.$header-XS-mobile;
+    }
   }
 
   a.topic {
@@ -67,6 +86,7 @@ main.topics {
     background: shared.$background-tertiary;
     border: 1px solid shared.$border-divider;
     border-radius: 8px;
+    overflow: hidden;
 
     &:hover {
       background: shared.$background-secondary;
@@ -84,7 +104,7 @@ main.topics {
       }
     }
 
-    h3 {
+    h4 {
       padding: 16px;
       font: shared.$header-XXS;
     }

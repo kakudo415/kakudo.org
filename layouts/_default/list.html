@@ -15,14 +15,15 @@
       {{ partial "site-menu.html" . }}
     </div>
     <main class="topics">
-      <h2>All posts</h2>
+      {{ partial "breadcrumbs.html" . }}
+      <h1>{{ .Title }}</h1>
       {{ $blog := where .Site.RegularPages "Section" "blog" }}
       {{ range $blog.GroupByDate "2006" }}
         <section class="yearly">
-          <p class="year-header">{{ .Key }}</p>
+          <h2 class="year-header">{{ .Key }}</h2>
           {{ range .Pages.GroupByDate "01"}}
             <section class="monthly">
-              <p class="month-header">{{ .Key }}</p>
+              <h3 class="month-header">{{ .Key }}</h3>
               {{ range .Pages }}
                 <a href="{{ .Permalink }}" class="topic">
                   {{ if .Params.thumbnail }}
@@ -34,7 +35,7 @@
                       <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
                     </picture>
                   {{ end }}
-                  <h3>{{ .Title }}</h3>
+                  <h4>{{ .Title }}</h4>
                   {{ with .Params.Description }}
                     <p>{{ . }}</p>
                   {{ end }}
