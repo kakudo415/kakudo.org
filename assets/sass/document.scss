@@ -56,11 +56,6 @@ main.content {
   p {
     margin: 1rem 0;
   }
-  p.warn {
-    padding: 1rem;
-    background: #fff8e1;
-    border-radius: 8px;
-  }
 
   strong {
     font-weight: bold;
@@ -70,21 +65,23 @@ main.content {
     color: shared.$foreground-link;
     text-decoration: underline;
   }
+
   a:hover {
     color: shared.$foreground-body;
   }
 
-  p, li {
+  p,
+  li {
     code {
-      display: inline-block;
+      overflow-wrap: break-word;
       font: shared.$text-M;
       font-family: monospace;
       margin: 0 2px;
-      padding: 0 4px;
+      padding: 2px 4px;
       background: shared.$background-secondary;
-      position: relative;
-      bottom: 1px;
       border-radius: 2px;
+      position: relative;
+      bottom: 1.5px;
     }
   }
 
@@ -95,7 +92,8 @@ main.content {
     border-radius: 8px;
   }
 
-  ol, ul {
+  ol,
+  ul {
     padding: 0 0 0 32px;
 
     li {
@@ -109,7 +107,8 @@ main.content {
     white-space: nowrap;
     border-collapse: collapse;
 
-    td, th {
+    td,
+    th {
       padding: 8px 16px;
       border: 1px solid shared.$border-divider;
     }
