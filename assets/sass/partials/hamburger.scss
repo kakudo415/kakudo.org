@@ -1,0 +1,47 @@
+@use 'shared';
+
+nav.hamburger {
+  display: none;
+  @include shared.break('tablet') {
+    display: block;
+  }
+
+  input.hamburger-toggle {
+    display: none;
+  }
+
+  input.hamburger-toggle ~ label.hamburger-button .icon-hamburger {
+    display: block;
+  }
+
+  input.hamburger-toggle ~ label.hamburger-button .icon-close {
+    display: none;
+  }
+
+  input.hamburger-toggle:checked ~ label.hamburger-button .icon-hamburger {
+    display: none;
+  }
+
+  input.hamburger-toggle:checked ~ label.hamburger-button .icon-close {
+    display: block;
+  }
+
+  label.hamburger-button {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
+
+  div.hamburger-content {
+    margin: 0 0 32px;
+    border-bottom: 1px solid shared.$border-divider;
+  }
+
+  input.hamburger-toggle ~ div.hamburger-content {
+    display: none;
+  }
+
+  input.hamburger-toggle:checked ~ div.hamburger-content {
+    display: block;
+  }
+}

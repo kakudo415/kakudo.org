@@ -1,6 +1,7 @@
 @use 'shared';
 @use 'partials/header';
 @use 'partials/link-menu'; // home-menu, site-menu
+@use 'partials/hamburger';
 
 div.container {
   margin: 0 auto;
@@ -35,8 +36,7 @@ div.container {
     grid-row: 2 / 3;
 
     @include shared.break('tablet') {
-      margin: 0 0 32px;
-      border-bottom: 1px solid shared.$border-divider;
+      display: none;
     }
   }
 
@@ -50,9 +50,7 @@ div.container {
     grid-row: 1 / 3;
 
     @include shared.break('tablet') {
-      margin: 32px 0 0;
-      padding: 32px 0 0;
-      border-top: 1px solid shared.$border-divider;
+      display: none;
     }
   }
 }
