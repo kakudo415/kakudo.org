@@ -48,21 +48,12 @@ main.topics {
     }
   }
 
-  h2.year-header {
+  h2 {
     @include shared.spacing('h3');
     @include shared.font('header-S');
 
     @include shared.break('mobile') {
       @include shared.font('header-S-mobile');
-    }
-  }
-
-  h3.month-header {
-    @include shared.spacing('h4');
-    @include shared.font('header-XS');
-
-    @include shared.break('mobile') {
-      @include shared.font('header-XS-mobile');
     }
   }
 
@@ -90,7 +81,7 @@ main.topics {
       }
     }
 
-    h4 {
+    h3 {
       padding: 16px;
       @include shared.font('header-XXS');
     }

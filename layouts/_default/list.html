@@ -21,10 +21,11 @@
       {{ $blog := where .Site.RegularPages "Section" "blog" }}
       {{ range $blog.GroupByDate "2006" }}
         <section class="yearly">
-          <h2 class="year-header">{{ .Key }}</h2>
+          {{ $year := .Key }}
           {{ range .Pages.GroupByDate "01"}}
+            {{ $month := .Key }}
             <section class="monthly">
-              <h3 class="month-header">{{ .Key }}</h3>
+              <h2 class="month-header">{{ $year }}-{{ $month }}</h2>
               {{ range .Pages }}
                 <a href="{{ .Permalink }}" class="topic">
                   {{ if .Params.thumbnail }}
@@ -36,7 +37,7 @@
                       <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
                     </picture>
                   {{ end }}
-                  <h4>{{ .Title }}</h4>
+                  <h3>{{ .Title }}</h3>
                   {{ with .Params.Description }}
                     <p>{{ . }}</p>
                   {{ end }}
