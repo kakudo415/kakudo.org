@@ -16,7 +16,6 @@
       {{ partial "site-menu.html" . }}
     </div>
     <main class="topics">
-      <h2>Latest posts</h2>
       {{ $blog := where .Site.RegularPages "Section" "blog" }}
       {{ $latest := first 10 $blog }}
       {{ range $latest }}
@@ -38,7 +37,7 @@
           </a>
         {{ end }}
       {{ end }}
-      <a class="read-more" href="{{ .Site.BaseURL }}blog/">Previous posts</a>
+      <a class="read-more" href="{{ .Site.BaseURL }}blog/">Read more</a>
     </main>
   </div>
 {{ end }}
