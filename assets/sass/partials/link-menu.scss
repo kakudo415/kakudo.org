@@ -2,7 +2,7 @@
 
 nav.link-menu {
   h5 {
-    margin: 0 0 1em;
+    margin: 0 0 0.75em;
     @include shared.font('label-L');
     color: shared.$foreground-description;
   }
@@ -24,6 +24,20 @@ nav.link-menu {
 
         &:hover {
           text-decoration: none;
+        }
+      }
+
+      p {
+        @include shared.font('text-M');
+      }
+    }
+
+    &.sub {
+      li {
+        a {
+          @include shared.font('text-M');
+          font-weight: 500;
+          line-height: 24px;
         }
       }
     }
