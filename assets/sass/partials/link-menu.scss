@@ -3,7 +3,7 @@
 nav.link-menu {
   h5 {
     margin: 0 0 1em;
-    font: shared.$label-L;
+    @include shared.font('label-L');
     color: shared.$foreground-description;
   }
 
@@ -17,7 +17,7 @@ nav.link-menu {
 
       a {
         display: inline-block;
-        font: shared.$text-L;
+        @include shared.font('text-L');
         font-weight: 500;
         line-height: 24px;
         text-decoration: underline;

@@ -54,7 +54,7 @@ div.container {
 main.topics {
   h2 {
     margin: 0 0 16px;
-    font: shared.$label-L;
+    @include shared.font('label-L');
     color: shared.$foreground-description;
   }
 
@@ -84,7 +84,7 @@ main.topics {
 
     h3 {
       padding: 16px;
-      font: shared.$header-XXS;
+      @include shared.font('header-XXS');
     }
 
     p {
@@ -93,7 +93,7 @@ main.topics {
   }
 
   a.read-more {
-    font: shared.$text-L;
+    @include shared.font('text-L');
     font-weight: 500;
     text-decoration: underline;
 

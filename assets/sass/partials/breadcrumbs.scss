@@ -9,7 +9,7 @@ main nav.breadcrumbs {
 
     li {
       margin: 0;
-      font: shared.$text-M;
+      @include shared.font('text-M');
       display: flex;
 
       a {

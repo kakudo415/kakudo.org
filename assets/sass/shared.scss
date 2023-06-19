@@ -1,6 +1,3 @@
-$breakpoint-mobile: 520px;
-$breakpoint-tablet: 960px;
-
 $breakpoints: (
   'mobile': 520px,
   'tablet': 960px,
@@ -25,26 +22,89 @@ $background-tertiary:    #F8F8FB;
 
 $border-divider:         #D8D8DB;
 
-$font: 'Inter', sans-serif;
+$font-weights: (
+  'header-XXL':        400,
+  'header-XL':         400,
+  'header-L':          400,
+  'header-L-mobile':   500,
+  'header-M':          400,
+  'header-M-mobile':   500,
+  'header-S':          400,
+  'header-S-mobile':   500,
+  'header-XS':         400,
+  'header-XS-mobile':  500,
+  'header-XXS':        400,
+  'header-XXS-mobile': 500,
 
-$header-XXL: 400 57px / 1.4 $font;
-$header-XL: 400 45px / 1.4 $font;
-$header-L: 400 36px / 1.4 $font;
-$header-L-mobile: 500 32px / 1.5 $font;
-$header-M: 400 32px / 1.5 $font;
-$header-M-mobile: 500 28px / 1.5 $font;
-$header-S: 400 28px / 1.5 $font;
-$header-S-mobile: 500 24px / 1.5 $font;
-$header-XS: 400 24px / 1.5 $font;
-$header-XS-mobile: 500 20px / 1.5 $font;
-$header-XXS: 400 20px / 1.5 $font;
-$header-XXS-mobile: 500 16px / 1.7 $font;
+  'text-L':            400,
+  'text-M':            400,
 
-$text-L: 400 16px / 1.7 $font;
-$text-M: 400 14px / 1.7 $font;
+  'label-L':           500,
+  'label-M':           500,
+);
 
-$label-L: 500 14px / 1.5 $font;
-$label-M: 500 12px / 1.5 $font;
+$font-sizes: (
+  'header-XXL':        57px,
+  'header-XL':         45px,
+  'header-L':          36px,
+  'header-L-mobile':   32px,
+  'header-M':          32px,
+  'header-M-mobile':   28px,
+  'header-S':          28px,
+  'header-S-mobile':   24px,
+  'header-XS':         24px,
+  'header-XS-mobile':  20px,
+  'header-XXS':        20px,
+  'header-XXS-mobile': 16px,
+
+  'text-L':            16px,
+  'text-M':            14px,
+
+  'label-L':           14px,
+  'label-M':           12px,
+);
+
+$line-heights: (
+  'header-XXL':        1.4,
+  'header-XL':         1.4,
+  'header-L':          1.4,
+  'header-L-mobile':   1.5,
+  'header-M':          1.5,
+  'header-M-mobile':   1.5,
+  'header-S':          1.5,
+  'header-S-mobile':   1.5,
+  'header-XS':         1.5,
+  'header-XS-mobile':  1.5,
+  'header-XXS':        1.5,
+  'header-XXS-mobile': 1.7,
+
+  'text-L':            1.7,
+  'text-M':            1.7,
+
+  'label-L':           1.5,
+  'label-M':           1.5,
+);
+
+@mixin font($size) {
+  font-feature-settings: 'palt';
+  font-weight: map-get($font-weights, $size);
+  font-size: map-get($font-sizes, $size);
+  line-height: map-get($line-heights, $size);
+  font-family: 'Inter', sans-serif;
+}
+
+$spacing: (
+  'h1': 64px 0 24px,
+  'h2': 64px 0 24px,
+  'h3': 40px 0 24px,
+  'h4': 40px 0 16px,
+  'h5': 40px 0 16px,
+  'h6': 24px 0 16px,
+);
+
+@mixin spacing($size) {
+  margin: map-get($spacing, $size);
+}
 
 * {
   box-sizing: border-box;
@@ -53,6 +113,7 @@ $label-M: 500 12px / 1.5 $font;
 }
 
 html {
+  letter-spacing: 0.04em;
 
   &,
   &.wf-loading {
@@ -68,9 +129,7 @@ html {
 body {
   padding: 0 40px;
   color: $foreground-body;
-  font: $text-L;
-  font-feature-settings: 'palt';
-  letter-spacing: 0.04em;
+  @include font('text-L');
 
   @include break('tablet') {
     display: block;

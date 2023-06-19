@@ -2,7 +2,7 @@
 
 header.name {
   h1 {
-    font: shared.$header-S;
+    @include shared.font('header-S');
     line-height: 1;
   }
 }

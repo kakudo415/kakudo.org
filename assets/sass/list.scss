@@ -54,29 +54,29 @@ div.container {
 
 main.topics {
   h1 {
-    margin: 64px 0 24px;
-    font: shared.$header-L;
+    @include shared.spacing('h1');
+    @include shared.font('header-L');
 
     @include shared.break('mobile') {
-      font: shared.$header-L-mobile;
+      @include shared.font('header-L-mobile');
     }
   }
 
   h2.year-header {
-    margin: 40px 0 24px;
-    font: shared.$header-S;
+    @include shared.spacing('h3');
+    @include shared.font('header-S');
 
     @include shared.break('mobile') {
-      font: shared.$header-S-mobile;
+      @include shared.font('header-S-mobile');
     }
   }
 
   h3.month-header {
-    margin: 40px 0 16px;
-    font: shared.$header-XS;
+    @include shared.spacing('h4');
+    @include shared.font('header-XS');
 
     @include shared.break('mobile') {
-      font: shared.$header-XS-mobile;
+      @include shared.font('header-XS-mobile');
     }
   }
 
@@ -106,7 +106,7 @@ main.topics {
 
     h4 {
       padding: 16px;
-      font: shared.$header-XXS;
+      @include shared.font('header-XXS');
     }
 
     p {
