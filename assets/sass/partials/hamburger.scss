@@ -30,6 +30,10 @@ nav.hamburger {
     position: absolute;
     top: 32px;
     right: 32px;
+
+    @include shared.break('mobile') {
+      right: 16px;
+    }
   }
 
   div.hamburger-content {
