@@ -64,6 +64,7 @@ main.topics {
     background: shared.$background-tertiary;
     border: 1px solid shared.$border-divider;
     border-radius: 8px;
+    overflow: hidden;
 
     &:hover {
       background: shared.$background-secondary;
