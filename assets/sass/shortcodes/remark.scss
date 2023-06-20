@@ -1,31 +1,15 @@
-div.remark {
+@use 'shared';
+
+p.remark {
   margin: 16px 0;
   padding: 16px;
   border-radius: 8px;
-  display: flex;
-
-  i {
-    margin-right: 8px;
-    font-size: calc(16px * 1.7); // $font-text-L's line-height
-  }
-
-  span {
-    margin: 0;
-  }
 }
 
-div.remark.info {
-  background: #F1F8E9;
-
-  i {
-    color: #689F38;
-  }
+p.remark.info {
+  border: 2px solid map-get(shared.$color-forest, '600');
 }
 
-div.remark.warning {
-  background: #FFFDE7;
-
-  i {
-    color: #FBC02D;
-  }
+p.remark.warning {
+  border: 2px solid map-get(shared.$color-sun, '800');
 }
