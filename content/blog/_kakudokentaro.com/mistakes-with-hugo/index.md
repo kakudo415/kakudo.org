@@ -3,6 +3,9 @@ title: "HugoとGitHub Pagesでハマったこと"
 date: 2022-09-01T10:54:12+09:00
 draft: false
 tags: ['Web', 'Hugo']
+
+aliases:
+  - /2022/09/01/hugo-failure/
 ---
 
 {{% remark "warning" %}}

@@ -4,6 +4,9 @@ date: 2023-05-17T03:22:26+09:00
 description: "学内ネットワークの研究室PCに、Cloudflare Tunnelsを利用してSSHした備忘録"
 tags: ["Network", "Cloudflare"]
 draft: false
+
+aliases:
+  - /2023/05/17/lab-network-tunneling/
 ---
 
 研究室に置いてある自分のPCに外部からSSHしたいとき、ありますよね？　私はあります。

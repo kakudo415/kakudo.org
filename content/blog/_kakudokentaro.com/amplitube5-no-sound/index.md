@@ -5,6 +5,9 @@ description: "AmpliTube 5使用時、オーディオインターフェースか�
 tags: []
 thumbnail: "option.png"
 draft: false
+
+aliases:
+  - /2023/01/28/amplitube5-no-sound/
 ---
 
 備忘録です。

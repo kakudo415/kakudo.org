@@ -4,6 +4,9 @@ date: 2022-12-21T00:00:00+09:00
 description: "Version 1.63から使えるグローバル変数について"
 tags: ["Rust"]
 draft: false
+
+aliases:
+  - /2022/12/21/global-variable-in-rust/
 ---
 
 これは、[RICORA Advent Calendar 2022](https://adventar.org/calendars/7447) の **21日目** の記事です。

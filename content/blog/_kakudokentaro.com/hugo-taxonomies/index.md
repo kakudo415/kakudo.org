@@ -4,6 +4,9 @@ date: 2022-09-06T01:12:54+09:00
 description: "HugoのTaxonomy（タグ・カテゴリ）について。設定や無効化の方法。"
 tags: ['Web', 'Hugo']
 draft: false
+
+aliases:
+  - /2022/09/06/hugo-taxonomy/
 ---
 
 {{% remark "warning" %}}

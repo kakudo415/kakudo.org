@@ -3,6 +3,9 @@ title: "GDB 使い方備忘録"
 date: 2023-04-17T15:05:50+09:00
 tags: ["GDB"]
 draft: false
+
+aliases:
+  - /2023/04/17/gdb-usage/
 ---
 
 最近、[低レイヤを知りたい人のためのCコンパイラ作成入門](https://www.sigbus.info/compilerbook)を写経しています。

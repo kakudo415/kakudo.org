@@ -3,6 +3,9 @@ title: "Davinci Resolve キーボードショートカット備忘録"
 date: 2023-03-09T17:18:10+09:00
 tags: ["Davinci Resolve"]
 draft: false
+
+aliases:
+  - /2023/03/09/davinci-resolve-shortcut/
 ---
 
 Davinci Resolve のデフォルト設定（Keyboard Customization の "Davinci Resolve" プリセット）です。

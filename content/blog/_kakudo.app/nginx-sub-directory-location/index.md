@@ -3,6 +3,9 @@ title: "nginxでrewriteを使わずにディレクトリ構造にするproxy_pas
 date: 2018-08-22T00:00:00+09:00
 tags: ["Former Blog Post", "Web", "nginx"]
 draft: false
+
+aliases:
+  - /2018/08/22/nginx-dir/
 ---
 
 {{% remark "warning" %}}

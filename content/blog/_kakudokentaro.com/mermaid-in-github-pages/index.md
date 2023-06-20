@@ -3,6 +3,9 @@ title: "MermaidをGithub Pagesでも使う"
 date: 2023-05-03T20:15:08+09:00
 tags: ["GitHub Pages", "Mermaid"]
 draft: false
+
+aliases:
+  - /2023/05/03/mermaid-in-github-pages/
 ---
 
 GitHub PagesでもMermaidが使いたくなったので備忘録。単刀直入には`<header>`に以下を追加。

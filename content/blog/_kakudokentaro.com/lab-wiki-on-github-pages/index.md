@@ -4,6 +4,9 @@ date: 2023-05-05T11:50:55+09:00
 description: "研究室のWikiをMarkdown直置きのGitHub Pagesで作ったらなかなか便利そうだったという日記"
 tags: ["Diary", "GitHub Pages"]
 draft: false
+
+aliases:
+  - /2023/05/05/lab-wiki-on-github-pages/
 ---
 
 今から研究室を決めようとする学部生にとって、研究室の雰囲気を外から知ることは困難です。先輩から漏れ伝わってくるわずかな情報と、更新が途絶えがちなホームページから希望を決めなくてはなりません。

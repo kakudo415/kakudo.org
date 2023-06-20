@@ -3,6 +3,9 @@ title: "禁忌かもしれない未読マークと、消えないCSS疑似要素
 date: 2022-09-03T06:38:53+09:00
 draft: false
 tags: ['Web', 'CSS']
+
+aliases:
+  - /2022/09/03/unread-marker/
 ---
 
 {{% remark "warning" %}}

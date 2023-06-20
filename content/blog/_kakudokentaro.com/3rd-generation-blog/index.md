@@ -3,6 +3,9 @@ title: "このサイトを作るときに気をつけたこと"
 date: 2022-09-01T14:44:06+09:00
 draft: false
 tags: ['Web']
+
+aliases:
+  - /2022/09/01/points/
 ---
 
 {{% remark "warning" %}}

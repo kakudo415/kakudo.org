@@ -3,6 +3,9 @@ title: "初マイコンにPro Microを選んでしまったので、使い方メ
 date: 2018-08-07T00:00:00+09:00
 tags: ["Former Blog Post"]
 draft: false
+
+aliases:
+  - /2018/08/07/promicro-tutorial/
 ---
 
 {{% remark "warning" %}}

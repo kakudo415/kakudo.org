@@ -3,6 +3,9 @@ title: "HubotでSlackにattachments付きのリッチなメッセージを送る
 date: 2018-08-29T00:00:00+09:00
 tags: ["Former Blog Post", "Slack"]
 draft: false
+
+aliases:
+  - /2018/08/29/hubot-slack-attachments/
 ---
 
 {{% remark "warning" %}}

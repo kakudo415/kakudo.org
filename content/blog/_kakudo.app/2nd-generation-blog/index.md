@@ -3,6 +3,9 @@ title: "二代目のブログができました"
 date: 2018-08-05T00:00:00+09:00
 tags: ["Former Blog Post"]
 draft: false
+
+aliases:
+  - /2018/08/05/blog2gen/
 ---
 
 {{% remark "warning" %}}

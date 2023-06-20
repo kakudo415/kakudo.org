@@ -4,6 +4,9 @@ date: 2023-05-05T14:19:27+09:00
 tags: ["ATOK"]
 thumbnail: "return-history.png"
 draft: false
+
+aliases:
+  - /2023/05/05/atok-settings/
 ---
 
 - 英字配列キーボード
