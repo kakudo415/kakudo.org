@@ -211,4 +211,9 @@ body {
     color: inherit;
     text-decoration: none;
   }
+
+  a:focus {
+    outline: 2px solid map-get($color-wood, '600');
+    border-radius: 4px;
+  }
 }
