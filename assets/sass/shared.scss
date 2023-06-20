@@ -11,6 +11,10 @@ $breakpoints: (
 
 $max-width: 1024px;
 
+$color-white: (
+  '1000': #FFFFFF,
+);
+
 $color-sea: (
   '900': #000082,
   '800': #0017C1,
@@ -22,6 +26,19 @@ $color-sea: (
   '200': #9DB7F9,
   '100': #C5D7FB,
   '50':  #E8F1FE,
+);
+
+$color-sumi: (
+  '900': #1A1A1C,
+  '800': #414143,
+  '700': #626264,
+  '600': #757578,
+  '500': #949497,
+  '400': #B4B4B7,
+  '300': #D8D8DB,
+  '200': #E8E8EB,
+  '100': #F1F1F4,
+  '50':  #F8F8FB,
 );
 
 $color-forest: (
@@ -63,14 +80,14 @@ $color-sun: (
   '50':  #FFE7E6,
 );
 
-$foreground-body:        #1A1A1C;
-$foreground-description: #626264;
-$foreground-link:        #0017C1;
-$foreground-hover:       #000082;
+$foreground-body:        map-get($color-sumi, '900');
+$foreground-description: map-get($color-sumi, '700');
+$foreground-link:        map-get($color-sea, '800');
+$foreground-hover:       map-get($color-sea, '900');
 
-$background-primary:     #FFFFFF;
-$background-secondary:   #F1F1F4;
-$background-tertiary:    #F8F8FB;
+$background-primary:     map-get($color-white, '1000');
+$background-secondary:   map-get($color-sumi, '100');
+$background-tertiary:    map-get($color-sumi, '50');
 
 $border-divider:         #D8D8DB;
 
