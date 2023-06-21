@@ -1,7 +1,7 @@
 @use 'shared';
 @use 'shortcodes/remark';
 
-main.content {
+div.document {
   h1 {
     @include shared.spacing('h1');
     @include shared.font('header-L');
@@ -95,10 +95,32 @@ main.content {
 
   ol,
   ul {
-    padding: 0 0 0 32px;
-
     li {
       margin: 16px 0;
+      padding: 0 0 0 24px;
+      position: relative;
+      list-style: none;
+
+      &::before {
+        position: absolute;
+        left: 0;  
+      }
+    }
+  }
+
+  ol {
+    counter-reset: item;
+
+    li::before {
+      content: counter(item) '.';
+      counter-increment: item;
+    }
+  }
+
+  ul {
+    li::before {
+      content: '\2022';
+      font-weight: 700;
     }
   }
 
