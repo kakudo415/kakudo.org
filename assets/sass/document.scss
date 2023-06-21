@@ -95,15 +95,15 @@ div.document {
 
   ol,
   ul {
+    margin: 16px 0;
+
     li {
-      margin: 16px 0;
-      padding: 0 0 0 24px;
-      position: relative;
+      margin: 8px 0;
       list-style: none;
+      position: relative;
 
       &::before {
         position: absolute;
-        left: 0.2em;
       }
     }
   }
@@ -111,16 +111,26 @@ div.document {
   ol {
     counter-reset: item;
 
+    li {
+      padding-left: 32px;
+    }
+
     li::before {
       content: counter(item) '.';
       counter-increment: item;
+      left: 0.2em;
     }
   }
 
   ul {
+    li {
+      padding-left: 24px;
+    }
+
     li::before {
       content: '\2022';
       font-weight: 700;
+      left: 0.2em;
     }
   }
 
