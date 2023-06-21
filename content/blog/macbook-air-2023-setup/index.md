@@ -169,10 +169,15 @@ SASS･SCSSを利用するために`dart-sass-embedded`が必要なので、[Rel
 
 大学のメールアドレスで利用するため。App Storeからダウンロードするだけです。
 
+### Slack
+
+無料プランだと3ヶ月でデータが消えるようになったので、乗り換えを検討しています。
+
 ## フォント
 
 VSCodeのところで述べたCicaやHackGenに加えて、通常のフォントだとこのあたりがお気に入りです。
 
-[Inter](https://rsms.me/inter/)
-
-[Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
+- [Inter](https://rsms.me/inter/)
+- [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
+- [Noto Serif Japanese](https://fonts.google.com/noto/specimen/Noto+Serif+JP)
+- [Quicksand](https://fonts.google.com/specimen/Quicksand)
