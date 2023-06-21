@@ -71,12 +71,15 @@ main.content {
   }
 
   p,
-  li {
+  li,
+  table {
     code {
       @include shared.font('text-M');
       font-family: monospace;
       margin: 0 2px;
       padding: 2px 4px;
+      position: relative;
+      bottom: 1.5px;
       border-radius: 2px;
       overflow-wrap: break-word;
       background: shared.$background-secondary;
