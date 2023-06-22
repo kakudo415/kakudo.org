@@ -17,7 +17,8 @@ $$
 G/N = \lbrace gN \\; | \\; g \in G \rbrace
 $$
 
-この各左剰余類 $gN$ に対して, $|gN| = |N|$ である.
+この各左剰余類 $gN$ に対して, $|gN| = |N|$ である. （[剰余類](/notes/algebra/group/coset/)参照）
+
 左剰余類の数は $\lbrack G:H \rbrack$ と表されるため次の式が得られる.
 
 $$|N| \lbrack G:N \rbrack = |G|$$
