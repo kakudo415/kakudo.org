@@ -1,5 +1,5 @@
 +++
-title = 'Notebook'
+title = 'Notes'
 +++
 
 勉強しながら少しずつ書いていきます。
