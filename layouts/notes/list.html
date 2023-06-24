@@ -29,16 +29,19 @@
       {{ partial "breadcrumbs.html" . }}
       <div class="document">
         <h1>{{ .Title }}</h1>
-        {{ .Content }}
-        <div class="pages">
-          {{ range .Pages }}
-            <ul>
-              <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-              </li>
-            </ul>
-          {{ end }}
-        </div>  
+        {{ if .Content }}
+          {{ .Content }}
+        {{ else }}
+          <div class="pages">
+            {{ range .Pages }}
+              <ul>
+                <li>
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+              </ul>
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
     </main>
   </div>
