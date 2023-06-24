@@ -97,6 +97,11 @@ div.document {
   ul {
     margin: 16px 0;
 
+    ol,
+    ul {
+      margin: 8px 0;
+    }
+
     li {
       margin: 8px 0;
       list-style: none;
@@ -128,9 +133,17 @@ div.document {
     }
 
     li::before {
-      content: '\2022';
+      content: '\2022'; // BULLET
       font-weight: 700;
       left: 0.2em;
+    }
+  }
+
+  ol, ul {
+    ul {
+      li::before {
+        content: '\25E6'; // WHITE BULLET
+      }
     }
   }
 
