@@ -4,6 +4,8 @@ title: "剰余類"
 
 ## 命題 1
 
+$G$ を群, $H$ を $G$ の部分群とする.
+
 $$
 \forall g \in G, \quad |gH| = |Hg| = |H|.
 $$
