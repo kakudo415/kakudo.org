@@ -32,7 +32,7 @@
         {{ .Content }}
         {{ with .Pages }}
         <div class="pages">
-          <h2>Pages</h2>
+          <p>{{ $.Title }}</p>
           <ul>
             {{ range . }}
               <li>

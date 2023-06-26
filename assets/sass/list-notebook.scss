@@ -29,3 +29,50 @@ div.container {
     }
   }
 }
+
+main.content {
+  div.pages {
+    padding: 0.5rem 1rem;
+    border: 1px solid shared.$border-divider;
+    border-radius: 8px;
+    background: shared.$background-tertiary;
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0 0.5em;
+
+      li {
+        margin: 0;
+        padding: 0 0 0 1em;
+
+        &::before {
+          display: block;
+          content: '';
+          top: 0.8em;
+          left: 0;
+          height: 1px;
+          width: 0.5em;
+          background: shared.$foreground-description;
+        }
+
+        &::after {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 1px;
+          background: shared.$foreground-description;
+        }
+
+        &:last-child::after {
+          height: 50%;
+        }
+      }
+    }
+  }
+}
