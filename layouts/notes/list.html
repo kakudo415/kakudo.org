@@ -29,22 +29,18 @@
       {{ partial "breadcrumbs.html" . }}
       <div class="document">
         <h1>{{ .Title }}</h1>
-        {{ if .Content }}
-          {{ .Content }}
-        {{ else }}
-          <div class="pages">
-            {{ range .Pages }}
-              <ul>
-                <li>
-                  {{ if ge (.Pages | len) 2 }}
-                    <a href="{{ .Permalink }}">{{ .Title }} ({{ .Pages | len }})</a>
-                  {{ else }}
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                  {{ end }}
-                </li>
-              </ul>
+        {{ .Content }}
+        {{ with .Pages }}
+        <div class="pages">
+          <h2>Pages</h2>
+          <ul>
+            {{ range . }}
+              <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </li>
             {{ end }}
-          </div>
+          </ul>
+        </div>
         {{ end }}
       </div>
     </main>

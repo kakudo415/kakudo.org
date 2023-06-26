@@ -1,8 +1,8 @@
 ---
-title: 'フリンの分類'
+title: "Flynn's taxonomy"
 ---
 
-*Flynn's taxonomy*
+**フリンの分類**
 
 並列処理に関するアーキテクチャの分類
 
