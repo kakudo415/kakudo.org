@@ -1,0 +1,43 @@
+@use 'shared';
+@use 'partials/header';
+@use 'partials/link-menu'; // site-menu
+@use 'partials/breadcrumbs';
+@use 'partials/hamburger';
+@use 'document';
+
+div.container {
+  div.name {
+    grid-column: 1 / 10;
+    grid-row: 1 / 2;
+
+    @include shared.break('tablet') {
+      margin: 0 0 32px;
+    }
+  }
+
+  main.content {
+    grid-column: 1 / 10;
+    grid-row: 2 / 3;
+  }
+
+  div.site-menu {
+    grid-column: 10 / 13;
+    grid-row: 1 / 3;
+
+    @include shared.break('tablet') {
+      display: none;
+    }
+  }
+}
+
+main.content {
+  div.pages {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: shared.$background-tertiary;
+
+    ul {
+      margin: 0;
+    }
+  }
+}
