@@ -1,9 +1,9 @@
-@use 'shared';
+@use 'global/shared';
 @use 'partials/header';
 @use 'partials/link-menu'; // home-menu, site-menu
 @use 'partials/breadcrumbs';
 @use 'partials/hamburger';
-@use 'document';
+@use 'utility/document';
 
 div.container {
   div.name {
