@@ -155,7 +155,7 @@ $line-heights: (
 );
 
 @mixin font($size) {
-  font-feature-settings: 'pwid';
+  font-feature-settings: 'pkna';
   font-weight: map-get($font-weights, $size);
   font-size: map-get($font-sizes, $size);
   line-height: map-get($line-heights, $size);
