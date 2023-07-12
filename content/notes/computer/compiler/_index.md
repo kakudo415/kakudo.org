@@ -2,7 +2,7 @@
 title: 'Compiler'
 ---
 
-## 用語集
+## 個別記事のない用語集
 
 - CSE (Common Subexpression Elimination)
   - 共通部分式の除去
