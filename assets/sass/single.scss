@@ -1,6 +1,6 @@
 @use 'global/shared';
 @use 'partials/header';
-@use 'partials/link-menu'; // home-menu, site-menu
+@use 'partials/link-menu';
 @use 'partials/breadcrumbs';
 @use 'partials/hamburger';
 @use 'utility/document';
@@ -20,7 +20,7 @@ div.container {
     grid-row: 2 / 3;
   }
 
-  div.site-menu {
+  div.side-menu {
     grid-column: 10 / 13;
     grid-row: 1 / 3;
 

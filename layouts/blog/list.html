@@ -9,11 +9,8 @@
       {{ partial "header.html" . }}
     </div>
     {{ partial "hamburger.html" . }}
-    <div class="home-menu">
-      {{ partial "home-menu.html" . }}
-    </div>
-    <div class="site-menu">
-      {{ partial "site-menu.html" . }}
+    <div class="side-menu">
+      {{ partial "side-menu.html" . }}
     </div>
     <main class="posts">
       {{ partial "breadcrumbs.html" . }}
@@ -22,24 +19,29 @@
         {{ $year := .Key }}
         {{ range .Pages.GroupByDate "01"}}
           {{ $month := .Key }}
-            <h2>{{ $year }}-{{ $month }}</h2>
+          <h2>{{ $year }}-{{ $month }}</h2>
+          <div class="posts">
             {{ range .Pages }}
-              <a href="{{ .Permalink }}" class="post">
-                {{ if .Params.thumbnail }}
-                  {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
-                  {{ $webpImage := $sourceImage.Resize "744x webp" }}
-                  {{ $resizedImage := $sourceImage.Resize "744x" }}
-                  <picture class="thumbnail">
-                    <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
-                    <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
-                  </picture>
-                {{ end }}
-                <h3>{{ .Title }}</h3>
-                {{ with .Params.Description }}
-                  <p>{{ . }}</p>
-                {{ end }}
-              </a>
+              <div>
+                <a href="{{ .Permalink }}" class="post">
+                  {{ if .Params.thumbnail }}
+                    {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
+                    {{ $webpImage := $sourceImage.Resize "744x webp" }}
+                    {{ $resizedImage := $sourceImage.Resize "744x" }}
+                    <picture class="thumbnail">
+                      <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
+                      <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
+                    </picture>
+                  {{ else }}
+                    <div class="thumbnail">
+                      {{ .Site.Title }}
+                    </div>
+                  {{ end }}
+                  <h3>{{ .Title }}</h3>
+                </a>
+              </div>
             {{ end }}
+          </div>
         {{ end }}
       {{ end }}
     </main>
