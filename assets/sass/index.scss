@@ -40,14 +40,11 @@ div.posts {
   a.topic {
     display: block;
 
-    &:hover {
-      opacity: 0.8;
-    }
-
     .thumbnail {
       aspect-ratio: 2 / 1;
       overflow: hidden;
       border-radius: 8px;
+      border: 1px solid shared.$border-divider;
     }
 
     picture.thumbnail {
@@ -72,6 +69,17 @@ div.posts {
     h3 {
       margin: 8px 0 0;
       @include shared.font('header-XXS');
+
+      @include shared.break('mobile') {
+        @include shared.font('header-XXS-mobile');
+      }    
+    }
+
+    &:hover {
+      h3 {
+        text-decoration: underline;
+        text-underline-offset: 0.1em;
+      }
     }
   }
 }
