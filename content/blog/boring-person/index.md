@@ -1,6 +1,6 @@
 ---
 title: "自分がつまらない人間だったとき"
-description: ""
+description: "自らの力で日々を楽しめるようになる方法を模索しながら書き連ねる"
 thumbnail: "access-denied.png"
 date: 2023-07-13T19:28:33+09:00
 draft: false
