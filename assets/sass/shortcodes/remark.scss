@@ -13,3 +13,7 @@ p.remark.info {
 p.remark.warning {
   border: 2px solid map-get(shared.$color-sun, '800');
 }
+
+p.remark.supplement {
+  border: 2px solid map-get(shared.$color-sumi, '700');
+}

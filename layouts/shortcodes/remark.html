@@ -11,3 +11,9 @@
     {{- .Inner | markdownify -}}
   </p>
 {{- end }}
+
+{{ if eq $message "supplement" -}}
+  <p class="remark supplement">
+    {{- .Inner | markdownify -}}
+  </p>
+{{- end }}
