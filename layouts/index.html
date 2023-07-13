@@ -29,7 +29,7 @@
     {{ range .Sections.ByWeight }}
       <h2>{{ .Title }}</h2>
       <section class="{{ if .Params.has_thumbnails }}has-thumbnails{{ else }}no-thumbnails{{ end }}">
-        {{ $latest := first 8 .Pages }}
+        {{ $latest := first 8 .RegularPagesRecursive }}
         {{ range $latest }}
           <a href="{{ .Permalink }}">
             {{ if .Params.thumbnail }}

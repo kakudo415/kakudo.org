@@ -1,5 +1,7 @@
 ---
 title: 'Compiler'
+date: 2023-06-26T21:11:00+09:00
+draft: false
 ---
 
 ## 個別記事のない用語集
