@@ -1,49 +1,40 @@
 {{ define "extraHeads" }}
-  {{ $css := resources.Get "sass/blog.scss" | resources.ToCSS (dict "transpiler" "dartsass" "outputStyle" "compressed") | resources.Fingerprint }}
+  {{ $css := resources.Get "sass/blogs.scss" | resources.ToCSS (dict "transpiler" "dartsass" "outputStyle" "compressed") | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $css.Permalink }}">
 {{ end }}
 
 {{ define "main" }}
-  <div class="container">
-    <div class="name">
-      {{ partial "header.html" . }}
-    </div>
-    {{ partial "hamburger.html" . }}
-    <div class="side-menu">
-      {{ partial "side-menu.html" . }}
-    </div>
-    <main class="posts">
-      {{ partial "breadcrumbs.html" . }}
-      <h1>{{ .Title }}</h1>
-      {{ range .Pages.GroupByDate "2006" }}
-        {{ $year := .Key }}
-        {{ range .Pages.GroupByDate "01"}}
-          {{ $month := .Key }}
-          <h2>{{ $year }}-{{ $month }}</h2>
-          <div class="posts">
-            {{ range .Pages }}
-              <div>
-                <a href="{{ .Permalink }}" class="post">
-                  {{ if .Params.thumbnail }}
-                    {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
-                    {{ $webpImage := $sourceImage.Resize "744x webp" }}
-                    {{ $resizedImage := $sourceImage.Resize "744x" }}
-                    <picture class="thumbnail">
-                      <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
-                      <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
-                    </picture>
-                  {{ else }}
-                    <div class="thumbnail">
-                      {{ .Site.Title }}
-                    </div>
-                  {{ end }}
-                  <h3>{{ .Title }}</h3>
-                </a>
-              </div>
-            {{ end }}
-          </div>
-        {{ end }}
+  {{ partial "header.html" . }}
+  <main class="container">
+    {{ partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{ range .Pages.GroupByDate "2006" }}
+      {{ $year := .Key }}
+      {{ range .Pages.GroupByDate "01"}}
+        {{ $month := .Key }}
+        <h2>{{ $year }}-{{ $month }}</h2>
+        <section class="has-thumbnails">
+          {{ range .Pages }}
+            <a href="{{ .Permalink }}">
+              {{ if .Params.thumbnail }}
+                {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
+                {{ $webpImage := $sourceImage.Resize "744x webp" }}
+                {{ $resizedImage := $sourceImage.Resize "744x" }}
+                <picture class="thumbnail">
+                  <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
+                  <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
+                </picture>
+              {{ else }}
+                <div class="thumbnail">
+                  {{ .Site.Title }}
+                </div>
+              {{ end }}
+              <h3>{{ .Title }}</h3>
+            </a>
+          {{ end }}
+        </section>
       {{ end }}
-    </main>
-  </div>
+    {{ end }}
+    <a href="{{ .Permalink }}" class="read-more">Read more</a>
+  </main>
 {{ end }}

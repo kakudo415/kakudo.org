@@ -17,31 +17,23 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="container">
-    <div class="name">
-      {{ partial "header.html" . }}
-    </div>
-    {{ partial "hamburger.html" . }}
-    <div class="side-menu">
-      {{ partial "side-menu.html" . }}
-    </div>
-    <main class="content">
-      {{ partial "breadcrumbs.html" . }}
-      <div class="document">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-        {{ with .Pages }}
-        <div class="pages">
-          <ul>
-            {{ range . }}
-              <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-              </li>
-            {{ end }}
-          </ul>
-        </div>
-        {{ end }}
+  {{ partial "header.html" . }}
+  <main class="container narrow">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="document">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+      {{ with .Pages }}
+      <div class="pages">
+        <ul>
+          {{ range . }}
+            <li>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
       </div>
-    </main>
-  </div>
+      {{ end }}
+    </div>
+  </main>
 {{ end }}

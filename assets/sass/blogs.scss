@@ -1,7 +1,17 @@
 @use 'global/shared';
 @use 'partials/header';
+@use 'partials/breadcrumbs';
 
 main.container {
+  h1 {
+    @include shared.spacing('h1');
+    @include shared.font('header-L');
+
+    @include shared.break('mobile') {
+      @include shared.font('header-L-mobile');
+    }
+  }
+
   h2 {
     @include shared.spacing('h2');
     @include shared.font('header-S');
@@ -18,16 +28,6 @@ main.container {
 
     a {
       display: block;
-
-      &:nth-child(1),
-      &:nth-child(2) {
-        grid-column: span 6;
-
-        @include shared.break('mobile') {
-          grid-column: span 12;
-        }
-      }
-
       grid-column: span 4;
 
       @include shared.break('tablet') {
@@ -86,32 +86,6 @@ main.container {
           justify-content: center;
         }
       }
-    }
-
-    &.no-thumbnails {
-      a {
-        padding: 1rem;
-        border: 1px solid shared.$border-divider;
-        border-radius: 8px;
-
-        h3 {
-          margin: 0;
-        }
-      }
-    }
-  }
-
-  a.read-more {
-    display: block;
-    width: 50%;
-    margin: 32px auto 0;
-    padding: 0.5rem 0;
-    text-align: center;
-    border: 1px solid shared.$border-divider;
-    border-radius: 8px;
-
-    &:hover {
-      background: shared.$background-secondary;
     }
   }
 }

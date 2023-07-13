@@ -4,17 +4,9 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="container">
-    <div class="name">
-      {{ partial "header.html" . }}
-    </div>
-    {{ partial "hamburger.html" . }}
-    <div class="side-menu">
-      {{ partial "side-menu.html" . }}
-    </div>
-    <main class="content">
-      <h1>404</h1>
-      <h2>Not Found</h2>
-    </main>
-  </div>
+  {{ partial "header.html" . }}
+  <main class="container">
+    <h1>404</h1>
+    <h2>Not Found</h2>
+  </main>
 {{ end }}

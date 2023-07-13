@@ -4,40 +4,52 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="container">
-    <div class="name">
-      {{ partial "header.html" . }}
-    </div>
-    {{ partial "hamburger.html" . }}
-    <div class="side-menu">
-      {{ partial "side-menu.html" . }}
-    </div>
-    <main>
-      <div class="posts">
-        {{ $blog := where .Site.RegularPages "Section" "blog" }}
-        {{ $latest := first 10 $blog }}
+  {{ partial "header.html" . }}
+  <main class="container">
+    <section class="no-thumbnails">
+      {{ range .RegularPages }}
+        <a href="{{ .Permalink }}">
+          {{ if .Params.thumbnail }}
+            {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
+            {{ $webpImage := $sourceImage.Resize "744x webp" }}
+            {{ $resizedImage := $sourceImage.Resize "744x" }}
+            <picture class="thumbnail">
+              <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
+              <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
+            </picture>
+          {{ else }}
+            <div class="thumbnail">
+              {{ .Site.Title }}
+            </div>
+          {{ end }}
+          <h3>{{ .Title }}</h3>
+        </a>
+      {{ end }}
+    </section>
+    {{ range .Sections.ByWeight }}
+      <h2>{{ .Title }}</h2>
+      <section class="{{ if .Params.has_thumbnails }}has-thumbnails{{ else }}no-thumbnails{{ end }}">
+        {{ $latest := first 8 .Pages }}
         {{ range $latest }}
-          <div>
-            <a href="{{ .Permalink }}" class="topic">
-              {{ if .Params.thumbnail }}
-                {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
-                {{ $webpImage := $sourceImage.Resize "744x webp" }}
-                {{ $resizedImage := $sourceImage.Resize "744x" }}
-                <picture class="thumbnail">
-                  <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
-                  <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
-                </picture>
-              {{ else }}
-                <div class="thumbnail">
-                  {{ .Site.Title }}
-                </div>
-              {{ end }}
-              <h3>{{ .Title }}</h3>
-            </a>
-          </div>
+          <a href="{{ .Permalink }}">
+            {{ if .Params.thumbnail }}
+              {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
+              {{ $webpImage := $sourceImage.Resize "744x webp" }}
+              {{ $resizedImage := $sourceImage.Resize "744x" }}
+              <picture class="thumbnail">
+                <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
+                <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
+              </picture>
+            {{ else }}
+              <div class="thumbnail">
+                {{ .Site.Title }}
+              </div>
+            {{ end }}
+            <h3>{{ .Title }}</h3>
+          </a>
         {{ end }}
-      </div>
-      <a class="read-more" href="{{ .Site.BaseURL }}blog/">Read more</a>
-    </main>
-  </div>
+      </section>
+      <a href="{{ .Permalink }}" class="read-more">Read more</a>
+    {{ end }}
+  </main>
 {{ end }}

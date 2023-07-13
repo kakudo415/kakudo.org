@@ -209,21 +209,6 @@ body {
     padding: 0 16px;
   }
 
-  div.container {
-    margin: 0 auto;
-    padding: 64px 0;
-    max-width: $max-width;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 64px auto;
-    gap: 32px;
-
-    @include break('tablet') {
-      display: block;
-      padding: 32px 0;
-    }
-  }
-
   a {
     color: inherit;
     text-decoration: none;
@@ -233,4 +218,18 @@ body {
     outline: 2px solid map-get($color-wood, '600');
     border-radius: 4px;
   }
+}
+
+main.container {
+  margin: 0 auto;
+  padding: 64px 0;
+  max-width: $max-width;
+
+  @include break('tablet') {
+    padding: 32px 0;
+  }
+}
+
+main.container.narrow {
+  max-width: 760px;
 }
