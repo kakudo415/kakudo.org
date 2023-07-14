@@ -1,6 +1,7 @@
 ---
-title: "About me ･ 自己紹介"
+title: "About me"
 description: "覚道健太郎の自己紹介"
+icon: "🧑‍💻"
 ---
 
 応用代数とコンピュータサイエンスを学んでいる学部4年生です！

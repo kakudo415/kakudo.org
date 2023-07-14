@@ -6,29 +6,20 @@
 {{ define "main" }}
   {{ partial "header.html" . }}
   <main class="container">
-    <section class="no-thumbnails">
+    <div class="document">
+      {{ .Content }}
+    </div>
+    <section class="icons">
       {{ range .RegularPages }}
         <a href="{{ .Permalink }}">
-          {{ if .Params.thumbnail }}
-            {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
-            {{ $webpImage := $sourceImage.Resize "744x webp" }}
-            {{ $resizedImage := $sourceImage.Resize "744x" }}
-            <picture class="thumbnail">
-              <source srcset="{{ $webpImage.RelPermalink }}" type="image/webp">
-              <img src="{{ $resizedImage.RelPermalink }}" width="{{ $resizedImage.Width }}" height="{{ $resizedImage.Height }}" alt="Thumbnail">
-            </picture>
-          {{ else }}
-            <div class="thumbnail">
-              {{ .Site.Title }}
-            </div>
-          {{ end }}
+          <div class="icon">{{ with .Params.icon }}{{ . }}{{ end }}</div>
           <h3>{{ .Title }}</h3>
         </a>
       {{ end }}
     </section>
     {{ range .Sections.ByWeight }}
       <h2>{{ .Title }}</h2>
-      <section class="{{ if .Params.has_thumbnails }}has-thumbnails{{ else }}no-thumbnails{{ end }}">
+      <section class="{{ with .Params.style }}{{ . }}{{ else }}basic{{ end }}">
         {{ $latest := first 8 .RegularPagesRecursive }}
         {{ range $latest }}
           <a href="{{ .Permalink }}">

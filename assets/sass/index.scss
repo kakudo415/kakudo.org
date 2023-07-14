@@ -1,5 +1,6 @@
 @use 'global/shared';
 @use 'partials/header';
+@use 'utility/document';
 
 main.container {
   h2 {
@@ -58,7 +59,34 @@ main.container {
       }
     }
 
-    &.has-thumbnails {
+    &.icons {
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border: 1px solid shared.$border-divider;
+        border-radius: 10000px;
+
+        .icon {
+          margin-right: 1rem;
+          font-size: 2rem;
+        }
+
+        h3 {
+          margin: 0;
+        }
+
+        &:hover {
+          background: shared.$background-tertiary;
+          
+          h3 {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &.thumbnails {
       a {
         .thumbnail {
           aspect-ratio: 2 / 1;
@@ -88,7 +116,7 @@ main.container {
       }
     }
 
-    &.no-thumbnails {
+    &.basic {
       a {
         padding: 1rem;
         border: 1px solid shared.$border-divider;
