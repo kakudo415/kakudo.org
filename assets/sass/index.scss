@@ -19,15 +19,9 @@ main.container {
 
     a {
       display: block;
-
-      &:nth-child(1),
-      &:nth-child(2) {
-        grid-column: span 6;
-
-        @include shared.break('mobile') {
-          grid-column: span 12;
-        }
-      }
+      padding: 1rem;
+      border: 1px solid shared.$border-divider;
+      border-radius: 1rem;
 
       grid-column: span 4;
 
@@ -39,22 +33,19 @@ main.container {
         grid-column: span 12;
       }
 
+      &:hover {
+        background: shared.$background-tertiary;
+      }
+
       .thumbnail {
         display: none;
       }
 
       h3 {
-        margin: 8px 0 0;
         @include shared.font('text-L');
 
         @include shared.break('mobile') {
           @include shared.font('text-L');
-        }
-      }
-
-      &:hover {
-        h3 {
-          text-decoration: underline;
         }
       }
     }
@@ -65,29 +56,28 @@ main.container {
         align-items: center;
         padding: 0.5rem 1rem;
         border: 1px solid shared.$border-divider;
-        border-radius: 10000px;
 
         .icon {
           margin-right: 1rem;
           font-size: 2rem;
-        }
-
-        h3 {
-          margin: 0;
-        }
-
-        &:hover {
-          background: shared.$background-tertiary;
-          
-          h3 {
-            text-decoration: none;
-          }
         }
       }
     }
 
     &.thumbnails {
       a {
+        padding: 0;
+        border: none;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          grid-column: span 6;
+
+          @include shared.break('mobile') {
+            grid-column: span 12;
+          }
+        }
+
         .thumbnail {
           aspect-ratio: 2 / 1;
           overflow: hidden;
@@ -113,17 +103,17 @@ main.container {
           align-items: center;
           justify-content: center;
         }
-      }
-    }
-
-    &.basic {
-      a {
-        padding: 1rem;
-        border: 1px solid shared.$border-divider;
-        border-radius: 8px;
 
         h3 {
-          margin: 0;
+          margin: 8px 0 0;
+        }
+
+        &:hover {
+          background: none;
+
+          h3 {
+            text-decoration: underline;
+          }
         }
       }
     }

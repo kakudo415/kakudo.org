@@ -19,7 +19,7 @@
     </section>
     {{ range .Sections.ByWeight }}
       <h2>{{ .Title }}</h2>
-      <section class="{{ with .Params.style }}{{ . }}{{ else }}basic{{ end }}">
+      <section class="{{ with .Params.style }}{{ . }}{{ end }}">
         {{ $latest := first 8 .RegularPagesRecursive }}
         {{ range $latest }}
           <a href="{{ .Permalink }}">
