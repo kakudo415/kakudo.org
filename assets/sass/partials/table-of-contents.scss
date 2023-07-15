@@ -49,6 +49,12 @@ details.table-of-contents {
 
   summary {
     @include shared.font('label-L');
+
+    // ::marker spacer
+    &::before {
+      content: '';
+      margin-right: 0.5em;
+    }
   }
 
   nav {
