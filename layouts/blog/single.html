@@ -1,5 +1,5 @@
 {{ define "extraHeads" }}
-  {{ $css := resources.Get "sass/blog.scss" | resources.ToCSS (dict "transpiler" "dartsass" "outputStyle" "compressed") | resources.Fingerprint }}
+  {{ $css := resources.Get "sass/single.scss" | resources.ToCSS (dict "transpiler" "dartsass" "outputStyle" "compressed") | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $css.Permalink }}">
 {{ end }}
 
@@ -12,9 +12,6 @@
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年 1月 2日" }}</time>
       {{ .Content }}  
     </div>
-    <aside class="table-of-contents">
-      <h2>Table of Contents</h2>
-      {{ .TableOfContents }}
-    </aside>
+    {{ partial "table-of-contents.html" . }}
   </main>
 {{ end }}

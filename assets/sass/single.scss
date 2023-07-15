@@ -1,4 +1,25 @@
 @use 'global/shared';
 @use 'partials/header';
 @use 'partials/breadcrumbs';
+@use 'partials/table-of-contents';
 @use 'utility/document';
+
+main.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+
+  nav.breadcrumbs {
+    grid-column: span 12;
+    grid-row: 1 / 2;
+  }
+
+  div.document {
+    grid-column: span 9;
+    grid-row: 2 / 3;
+
+    @include shared.break('tablet') {
+      grid-column: span 12;
+    }
+  }
+}

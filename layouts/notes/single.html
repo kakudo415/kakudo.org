@@ -18,11 +18,12 @@
 
 {{ define "main" }}
   {{ partial "header.html" . }}
-  <main class="container narrow">
+  <main class="container">
     {{ partial "breadcrumbs.html" . }}
     <div class="document">
       <h1>{{ .Title }}</h1>
       {{ .Content }}
     </div>
+    {{ partial "table-of-contents.html" . }}
   </main>
 {{ end }}

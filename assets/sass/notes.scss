@@ -1,16 +1,35 @@
 @use 'global/shared';
 @use 'partials/header';
 @use 'partials/breadcrumbs';
+@use 'partials/table-of-contents';
 @use 'utility/document';
 
 main.container {
-  div.pages {
-    padding: 8px 16px;
-    border-radius: 8px;
-    background: shared.$background-tertiary;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
 
-    ul {
-      margin: 0;
+  nav.breadcrumbs {
+    grid-column: span 12;
+    grid-row: 1 / 2;
+  }
+
+  div.document {
+    grid-column: span 9;
+    grid-row: 2 / 3;
+
+    @include shared.break('tablet') {
+      grid-column: span 12;
+    }
+
+    div.pages {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: shared.$background-tertiary;
+
+      ul {
+        margin: 0;
+      }
     }
   }
 }
