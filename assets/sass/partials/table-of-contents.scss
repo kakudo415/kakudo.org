@@ -35,3 +35,46 @@ aside.table-of-contents {
     }
   }
 }
+
+details.table-of-contents {
+  display: none;
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  background: shared.$background-tertiary;
+  border-radius: 0.5rem;
+
+  @include shared.break('tablet') {
+    display: block;
+  }
+
+  summary {
+    @include shared.font('label-L');
+  }
+
+  nav {
+    @include shared.font('text-M');
+
+    ul {
+      list-style: none;
+      padding-left: 0.5em;
+      margin: 1rem 0 0;
+
+      li {
+        margin: 0.5em 0;
+        padding: 0;
+
+        &::before {
+          display: none;
+        }
+
+        a {
+          color: shared.$foreground-body;
+        }
+      }
+    }
+
+    &>ul {
+      padding-left: 0;
+    }
+  }
+}
