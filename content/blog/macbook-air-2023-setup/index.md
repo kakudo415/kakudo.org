@@ -185,6 +185,12 @@ SASS･SCSSを利用するために`dart-sass-embedded`が必要なので、[Rel
 そこで、このように「ページレイアウト設定を上書き」を変更します。
 常に連続ページを使用する設定にすることで、毎回メニューバーから変更する必要がなくなるわけです。
 
+### OpenSCAD
+
+テキストで3DモデリングができるCADです。デザインがGitで管理できるのが便利すぎて気に入っています。
+
+[OpenSCAD - The Programmers Solid 3D CAD Modeller](https://openscad.org/)
+
 ## フォント
 
 VSCodeのところで述べたCicaやHackGenに加えて、通常のフォントだとこのあたりがお気に入りです。
