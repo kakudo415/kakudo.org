@@ -3,7 +3,7 @@ title: "AmpliTube 5の音がMOTU M2から出ないのを直す"
 date: 2023-01-28T21:21:04+09:00
 description: "AmpliTube 5使用時、オーディオインターフェースから音が出ない問題を直せたので備忘録として手法を書き留めます"
 tags: []
-thumbnail: "option.png"
+images: ["option.png"]
 draft: false
 
 aliases:

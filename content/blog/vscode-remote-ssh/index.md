@@ -1,7 +1,7 @@
 ---
 title: "SSH先でもVS Codeで作業する方法"
 description: ""
-thumbnail: "remote-ssh-extension.png"
+images: ["remote-ssh-extension.png"]
 date: 2023-06-21T16:46:49+09:00
 draft: false
 ---
