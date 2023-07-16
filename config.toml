@@ -1,6 +1,8 @@
 title = 'kakudo.org'
 baseURL = 'https://kakudo.org/'
 
+googleAnalytics = 'G-N83S1TXH7H'
+
 [markup]
   [markup.highlight]
     style = 'onedark'

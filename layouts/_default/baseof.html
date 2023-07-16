@@ -13,6 +13,7 @@
   {{ end }}
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.svg" type="image/svg+xml">
   {{ block "extraHeads" . }}{{ end }}
+  {{ template "_internal/google_analytics.html" . }}
 </head>
 <body>
   {{ block "main" . }}{{ end }}
