@@ -4,12 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if not .IsHome -}} {{- .Page.Title }} - {{ end -}} {{- .Site.Title }}</title>
-  {{ if .IsHome }}
-    <meta name="description" content="覚道健太郎のホームページです！情報科学と数学を勉強中で、主にプログラミングについて書いています！">
-  {{ else }}
-    {{ with .Description }}
-      <meta name="description" content="{{ . }}">
-    {{ end }}
+  {{ with .Description }}
+    <meta name="description" content="{{ . }}">
   {{ end }}
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.svg" type="image/svg+xml">
   {{ block "extraHeads" . }}{{ end }}
