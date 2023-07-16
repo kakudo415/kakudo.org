@@ -1,5 +1,5 @@
-+++
-title = 'Blog'
-weight = 1
-style = 'thumbnails'
-+++
+---
+title: 'Blog'
+weight: 1
+style: 'thumbnails'
+---
