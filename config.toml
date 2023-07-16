@@ -3,6 +3,9 @@ baseURL = 'https://kakudo.org/'
 
 googleAnalytics = 'G-N83S1TXH7H'
 
+[params]
+  images = ['thumbnail.png'] # Open Graph
+
 [markup]
   [markup.highlight]
     style = 'onedark'
