@@ -1,7 +1,7 @@
 ---
 title: "MacBook Air 初期設定の記録"
 description: "MacBook Air 15\"を買ったので、この機会に初期設定を全て書き留めておく"
-images: ["settings-desktop-and-dock.png"]
+thumbnail: "settings-desktop-and-dock.png"
 date: 2023-06-17T13:38:36+09:00
 draft: false
 ---

@@ -16,8 +16,8 @@
         <section class="has-thumbnails">
           {{ range .Pages }}
             <a href="{{ .Permalink }}">
-              {{ if (index .Params.images 0) }}
-                {{ $sourceImage := .Resources.GetMatch (index .Params.images 0) }}
+              {{ if .Params.thumbnail }}
+                {{ $sourceImage := .Resources.GetMatch .Params.thumbnail }}
                 {{ $webpImage := $sourceImage.Resize "744x webp" }}
                 {{ $resizedImage := $sourceImage.Resize "744x" }}
                 <picture class="thumbnail">
