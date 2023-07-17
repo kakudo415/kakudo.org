@@ -1,6 +1,8 @@
 title = 'kakudo.org'
 baseURL = 'https://kakudo.org/'
 
+enableGitInfo = true
+
 googleAnalytics = 'G-N83S1TXH7H'
 
 [params]
