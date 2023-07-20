@@ -3,6 +3,12 @@
 aside.table-of-contents {
   grid-column: 10 / 13;
   grid-row: 2 / 3;
+  
+  height: 100vh;
+  overflow-y: auto;
+
+  position: sticky;
+  top: 0;
 
   @include shared.break('tablet') {
     display: none;
