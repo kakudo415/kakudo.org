@@ -3,7 +3,7 @@
 aside.table-of-contents {
   grid-column: 10 / 13;
   grid-row: 2 / 3;
-  
+
   height: 100vh;
   overflow-y: auto;
 
@@ -38,6 +38,11 @@ aside.table-of-contents {
 
     &>ul {
       padding-left: 0;
+      font-weight: bold;
+
+      ul {
+        font-weight: normal;
+      }
     }
   }
 }
@@ -68,7 +73,7 @@ details.table-of-contents {
 
     ul {
       list-style: none;
-      padding-left: 0.5em;
+      padding-left: 1em;
       margin: 1rem 0 0;
 
       li {
@@ -80,13 +85,23 @@ details.table-of-contents {
         }
 
         a {
+          text-decoration: none;
           color: shared.$foreground-body;
+
+          &:hover {
+            color: shared.$foreground-body;
+          }
         }
       }
     }
 
     &>ul {
       padding-left: 0;
+      font-weight: bold;
+
+      ul {
+        font-weight: normal;
+      }
     }
   }
 }
