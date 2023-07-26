@@ -27,7 +27,7 @@ aliases:
 
 ここでは仮に`example.com`をCloudflareのDNSで運用しているものとし、`mylab.example.com`にアクセスすることで研究室PCにSSH接続できるようにします。適宜お持ちのドメインに読み替えてください。
 
-### `cloudflared`のインストール
+### cloudflaredのインストール
 
 まずは接続元・接続先PC共に`cloudflared`をインストールし、ログインします。
 
@@ -102,16 +102,6 @@ ssh <NICKNAME>
 ```
 
 これでプライベートネットワーク内の研究室PCに外部からSSH接続できます！めでたい！便利！
-
-
-## Cloudflare Tunnelの仕組み
-
-TODO: そのうち勉強して書く
-
-## SSH ProxyCommandとは
-
-TEACHME: 結局どういう風に動作しているのか全然わからん。
-そもそも、このProxyCommandは手元で実行されているという理解でよい？
 
 ## 終わりに
 
