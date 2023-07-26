@@ -216,7 +216,7 @@ body {
 
   a:focus {
     outline: 2px solid map-get($color-wood, '600');
-    border-radius: 4px;
+    outline-offset: -2px;
   }
 }
 

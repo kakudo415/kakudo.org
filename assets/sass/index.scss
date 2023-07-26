@@ -68,6 +68,7 @@ main.container {
       a {
         padding: 0;
         border: none;
+        border-radius: 8px;
 
         &:nth-child(1),
         &:nth-child(2) {
