@@ -139,7 +139,8 @@ div.document {
     }
   }
 
-  ol, ul {
+  ol,
+  ul {
     ul {
       li::before {
         content: '\25E6'; // WHITE BULLET
@@ -171,9 +172,14 @@ div.document {
 
   pre {
     margin: 16px 0;
-    padding: 16px;
     border-radius: 8px;
     overflow-x: auto;
     @include shared.font('text-M');
+    display: flex; // HACK: I don't know why this works.
+
+    code {
+      display: block;
+      padding: 16px;
+    }
   }
 }
