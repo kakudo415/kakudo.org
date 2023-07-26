@@ -1,5 +1,5 @@
 ---
-title: "『RustとWebAssemblyによるゲーム開発』の感想"
+title: "O'Reilly『RustとWebAssemblyによるゲーム開発』の感想"
 description: "『RustとWebAssemblyによるゲーム開発』の感想と、可能な限り要点の解説も試みる"
 thumbnail: "rhb.png"
 date: 2023-07-26T15:16:38+09:00
