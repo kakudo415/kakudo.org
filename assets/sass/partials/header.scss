@@ -5,14 +5,30 @@ header.site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 6rem;
     margin: 0 auto;
-    padding: 2rem 0;
     max-width: 1440px;
   }
 
   h1 {
     @include shared.font('header-XS');
-    line-height: 1;
+    line-height: 2rem;
+  }
+
+  nav.header-menu {
+    display: flex;
+    overflow-y: auto;
+
+    a {
+      display: block;
+      margin-left: 0.5rem;
+      padding: 0 1rem;
+      line-height: 2rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   @include shared.break('mobile') {

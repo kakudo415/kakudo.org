@@ -3,6 +3,10 @@
     <h1>
       <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </h1>
-    <span>🚧 工事中</span>
+    <nav class="header-menu">
+      {{ range .Site.Sections }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end}}
+    </nav>
   </div>
 </header>
