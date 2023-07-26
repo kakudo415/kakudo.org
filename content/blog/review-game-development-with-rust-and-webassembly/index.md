@@ -12,6 +12,11 @@ draft: false
 
 しかし、ただ読んで手順通りに丸写ししただけでは何をやったかすぐに忘れてしまいそうなので、この記事に要点をまとめておきたいと思います。
 
+著者と僕のリポジトリは以下の通りです。合わせてご覧ください。
+
+- 著者: [PacktPublishing/Game-Development-with-Rust-and-WebAssembly](https://github.com/PacktPublishing/Game-Development-with-Rust-and-WebAssembly)
+- 拙作: [kakudo415/wasm-game-rs](https://github.com/kakudo415/wasm-game-rs)
+
 {{% remark "supplement" %}}
 やっと3章まで読み終わったところで、まだまだ書きかけです。
 {{% /remark %}}
