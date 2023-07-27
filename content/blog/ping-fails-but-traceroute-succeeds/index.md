@@ -1,7 +1,7 @@
 ---
 title: "pingが失敗したのにtracerouteだけ通った謎"
 description: "pingを実行したら失敗したが、tracerouteで確認しようとしたら通ってしまい、余計に混乱した話"
-thumbnail: ""
+thumbnail: "ping-fails.png"
 date: 2023-07-27T15:08:19+09:00
 draft: false
 ---
