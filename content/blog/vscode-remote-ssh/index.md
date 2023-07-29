@@ -6,12 +6,16 @@ date: 2023-06-21T16:46:49+09:00
 draft: false
 ---
 
-拡張機能**Remote - SSH**をインストールします。
+## 拡張機能
+
+**Remote - SSH**をインストールします。
 
 ![Remote SSH 拡張機能](remote-ssh-extension.png)
 
+## 設定 ･ 使い方
+
 リモートエクスプローラーが左のアクティビティバーに追加されるので、そこからSSH接続先を選択します。
-`~/.ssh/config`を参照していると思われるので、未設定の人はこの機会にやっておくといいです。
+`~/.ssh/config`を参照しているので、未設定の人はこの機会にやっておくといいです。
 
 [研究室PCにCloudflare TunnelsでSSHする](/blog/cloudflare-tunnels-into-lab/)も合わせてどうぞ
 
