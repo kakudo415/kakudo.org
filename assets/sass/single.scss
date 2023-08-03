@@ -9,6 +9,10 @@ main.container {
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
 
+  @include shared.break('tablet') {
+    display: block;
+  }
+
   nav.breadcrumbs {
     grid-column: span 12;
     grid-row: 1 / 2;
@@ -17,9 +21,5 @@ main.container {
   div.document {
     grid-column: span 9;
     grid-row: 2 / 3;
-
-    @include shared.break('tablet') {
-      grid-column: span 12;
-    }
   }
 }

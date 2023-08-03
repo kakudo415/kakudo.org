@@ -8,7 +8,7 @@ aside.table-of-contents {
   overflow-y: auto;
 
   position: sticky;
-  margin: 4rem 0;
+  margin: 4rem 0 0;
   top: 2rem;
 
   @include shared.break('tablet') {

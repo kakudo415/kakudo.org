@@ -3,14 +3,14 @@
 main nav.breadcrumbs {
   ol {
     padding: 0;
-    display: flex;
+    display: inline;
     flex-wrap: wrap;
     list-style: none;
 
     li {
       margin: 0;
       @include shared.font('text-M');
-      display: flex;
+      display: inline;
 
       a {
         color: shared.$foreground-link;
@@ -22,7 +22,7 @@ main nav.breadcrumbs {
       }
 
       span {
-        margin: 0 8px;
+        margin: 0 4px;
       }
     }
   }
