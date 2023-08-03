@@ -50,20 +50,6 @@ main.container {
       }
     }
 
-    &.icons {
-      a {
-        display: flex;
-        align-items: center;
-        padding: 0.5rem 1rem;
-        border: 1px solid shared.$border-divider;
-
-        .icon {
-          margin-right: 1rem;
-          font-size: 2rem;
-        }
-      }
-    }
-
     &.thumbnails {
       a {
         padding: 0;
