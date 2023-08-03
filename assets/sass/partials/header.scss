@@ -17,13 +17,19 @@ header.site-header {
 
   nav.header-menu {
     display: flex;
-    overflow-y: auto;
+    overflow-x: auto;
 
     a {
+      flex-shrink: 0;
       display: block;
       margin-left: 0.5rem;
       padding: 0 1rem;
       line-height: 2rem;
+      font-weight: 500;
+
+      @include shared.break('mobile') {
+        padding: 0 0.5rem;
+      }
 
       &:hover {
         text-decoration: underline;
