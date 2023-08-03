@@ -22,10 +22,6 @@
     {{ partial "breadcrumbs.html" . }}
     <div class="document">
       <h1>{{ .Title }}</h1>
-      <details class="table-of-contents">
-        <summary>Table of Contents</summary>
-        {{ .TableOfContents }}
-      </details>
       {{ .Content }}
     </div>
     {{ partial "table-of-contents.html" . }}
