@@ -1,19 +1,19 @@
 @use 'global/shared';
 
-p.remark {
+div.remark {
   margin: 16px 0;
-  padding: 16px;
+  padding: 0 16px;
   border-radius: 8px;
 }
 
-p.remark.info {
+div.remark.info {
   border: 2px solid map-get(shared.$color-forest, '600');
 }
 
-p.remark.warning {
+div.remark.warning {
   border: 2px solid map-get(shared.$color-sun, '800');
 }
 
-p.remark.supplement {
+div.remark.supplement {
   border: 2px solid map-get(shared.$color-sumi, '700');
 }
