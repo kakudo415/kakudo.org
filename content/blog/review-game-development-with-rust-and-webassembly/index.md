@@ -6,16 +6,14 @@ date: 2023-07-26T15:16:38+09:00
 draft: false
 ---
 
-これを買わずして何を買うという本が出たので、読み進めています。
-
-[O'Reilly Japan - RustとWebAssemblyによるゲーム開発](https://www.oreilly.co.jp/books/9784814400393/)
+これを買わずして何を買うという本、『[O'Reilly Japan - RustとWebAssemblyによるゲーム開発](https://www.oreilly.co.jp/books/9784814400393/)』が出ました。
 
 しかし、ただ読んで手順通りに丸写ししただけでは何をやったかすぐに忘れてしまいそうなので、この記事に要点をまとめておきたいと思います。
 
-著者と僕のリポジトリは以下の通りです。合わせてご覧ください。
+著者と僕のリポジトリはそれぞれ以下の通りです。合わせてご覧ください。
 
-- 著者: [PacktPublishing/Game-Development-with-Rust-and-WebAssembly](https://github.com/PacktPublishing/Game-Development-with-Rust-and-WebAssembly)
-- 拙作: [kakudo415/wasm-game-rs](https://github.com/kakudo415/wasm-game-rs)
+- [PacktPublishing/Game-Development-with-Rust-and-WebAssembly](https://github.com/PacktPublishing/Game-Development-with-Rust-and-WebAssembly)
+- [kakudo415/wasm-game-rs](https://github.com/kakudo415/wasm-game-rs)
 
 {{% remark "supplement" %}}
 やっと3章まで読み終わったところで、まだまだ書きかけです。
