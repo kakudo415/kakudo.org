@@ -12,6 +12,15 @@ main nav.breadcrumbs {
       @include shared.font('text-M');
       display: inline;
 
+      &::after {
+        content: '>';
+        margin: 0 0.5rem;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
       a {
         color: shared.$foreground-link;
         text-decoration: underline;
@@ -19,10 +28,6 @@ main nav.breadcrumbs {
 
       a:hover {
         color: shared.$foreground-hover;
-      }
-
-      span {
-        margin: 0 4px;
       }
     }
   }
