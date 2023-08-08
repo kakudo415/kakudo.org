@@ -22,16 +22,18 @@ aliases:
 
 以下の手順はあくまで備忘録です。次のような公式ドキュメントが存在しますので、詳しくはそちらをご覧ください。
 
-- Tunnelの設定方法など: [Via the command line · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/)
-- SSH接続を利用するときの設定方法など: [SSH · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/use-cases/ssh/)
+- Tunnelの設定方法  
+  [Via the command line · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/)
+- SSH接続を利用するときの設定方法  
+  [SSH · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/use-cases/ssh/)
 
 ここでは仮に`example.com`をCloudflareのDNSで運用しているものとし、`mylab.example.com`にアクセスすることで研究室PCにSSH接続できるようにします。適宜お持ちのドメインに読み替えてください。
 
-### cloudflaredのインストール
+### インストール
 
-まずは接続元・接続先PC共に`cloudflared`をインストールし、ログインします。
+まずは**接続元・接続先PC共に**`cloudflared`をインストールし、ログインします。
 
-OSごとのインストール方法は[Downloads · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/)をご覧いただくとして、macOSの場合は次のようになります。
+OSごとのインストール方法は[Downloads · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/)をご覧いただきたいですが、たとえばmacOSの場合は次のようになります。
 
 ```sh
 brew install cloudflared
@@ -45,7 +47,7 @@ cloudflared tunnel login
 
 Webブラウザが立ち上がった方はそこから、CUI環境の方は表示されるURLをコピペしてCloudflareにログインします。どのドメイン下にTunnelを作るか聞かれるので、お好きなものを（この記事では`example.com`を）答えてください。
 
-### 研究室PC側（Tunnel作成）
+### 研究室PC（Tunnel作成）
 
 ```sh
 cloudflared tunnel create <TUNNEL_NAME>
@@ -70,17 +72,11 @@ cloudflared tunnel route dns <TUNNEL_ID> mylab.example.com
 これでTunnelの設定は完了です。`cloudflared`を再起動して設定を適用します。
 
 ```sh
-cloudflared service restart
-```
-
-公式ドキュメントによるとこれで再起動されるはずですが、自分の環境では`Register tunnel error from server side error="Unauthorized: Failed to get tunnel"`というエラーが出て上手くいかなかったため次のように`service`を再インストールしました。
-
-```sh
-sudo cloudflared service uninstall
 sudo cloudflared --config <config.jsonへの絶対パス> service install
+sudo systemctl restart cloudflared
 ```
 
-再起動、ないし再インストールを行うことで、研究室PCとCloudflareがTunnelで接続されます。
+再起動後、研究室PCとCloudflareがTunnelで接続されます。
 
 ### 手元のPC（SSH設定）
 
@@ -110,7 +106,8 @@ Cloudflareはどうやって儲けてるんですか？
 ## 参考にしたもの
 
 1. [Downloads · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/)
-1. [Via the command line · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/)
-2. [SSH · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/use-cases/ssh/)
-3. [proxy - How does ssh ProxyCommand actually work? - Server Fault](https://serverfault.com/questions/544545/how-does-ssh-proxycommand-actually-work)
+2. [Via the command line · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/)
+3. [Run as a service on Linux · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/install-and-setup/tunnel-guide/local/as-a-service/linux/)
+4. [SSH · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/use-cases/ssh/)
+5. [proxy - How does ssh ProxyCommand actually work? - Server Fault](https://serverfault.com/questions/544545/how-does-ssh-proxycommand-actually-work)
 
