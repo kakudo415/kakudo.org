@@ -1,5 +1,5 @@
 ---
-title: "pingが失敗したのにtracerouteだけ通った謎"
+title: "Pingが失敗したのにtracerouteだけ通った謎"
 description: "pingを実行したら失敗したが、tracerouteで確認しようとしたら通ってしまい、余計に混乱した話"
 thumbnail: "ping-fails.png"
 date: 2023-07-27T15:08:19+09:00
@@ -44,7 +44,7 @@ traceroute -I www.google.com
 どうやら、これがファイアウォールだったようです。
 `www.tus.ac.jp`宛だと`ping`が成功したのは、大学内部のネットワークだったからなのでしょう。
 
-### ping ･ traceroute
+### Ping ･ traceroute
 
 もう少し両コマンドについて調べてみると、`traceroute`もICMPを利用しているようです。
 UDPでテスト用のパケットを送信しているものの、TTL切れを知らせるメッセージはICMPで返ってくるからです。
