@@ -56,15 +56,6 @@ main.container {
         border: none;
         border-radius: 8px;
 
-        &:nth-child(1),
-        &:nth-child(2) {
-          grid-column: span 6;
-
-          @include shared.break('mobile') {
-            grid-column: span 12;
-          }
-        }
-
         .thumbnail {
           aspect-ratio: 2 / 1;
           overflow: hidden;
