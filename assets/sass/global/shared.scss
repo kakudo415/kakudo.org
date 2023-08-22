@@ -159,6 +159,7 @@ $line-heights: (
   font-size: map-get($font-sizes, $size);
   line-height: map-get($line-heights, $size);
   font-family: 'Inter', sans-serif;
+  font-feature-settings: 'calt', 'cv01', 'cv02', 'cv03', 'cv04';
 }
 
 $spacing: (
