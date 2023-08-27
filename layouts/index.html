@@ -6,7 +6,7 @@
 {{ define "main" }}
   {{ partial "header.html" . }}
   <main class="container">
-    <div class="document">
+    <div class="document content">
       {{ .Content }}
       {{ range .Sections.ByWeight }}
         <h2>{{ .Title }}</h2>
@@ -23,5 +23,6 @@
         <a href="{{ .Permalink }}">-> Read more</a>
       {{ end }}
     </div>
+    {{ partial "external-links.html" . }}
   </main>
 {{ end }}
