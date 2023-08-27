@@ -7,7 +7,7 @@ header.site-header {
     justify-content: space-between;
     height: 4rem;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: shared.$max-width;
 
     @include shared.break('tablet') {
       height: 6rem;
@@ -15,11 +15,12 @@ header.site-header {
   }
 
   h1 {
-    @include shared.font('header-XS-mobile');
+    @include shared.font('header-XXS-mobile');
     line-height: 2rem;
 
     @include shared.break('tablet') {
-      @include shared.font('header-XS');
+      @include shared.font('header-XXS');
+      font-weight: 500;
     }
   }
 
