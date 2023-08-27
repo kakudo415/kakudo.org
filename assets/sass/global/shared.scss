@@ -1,10 +1,10 @@
 $breakpoints: (
-  'mobile': 520px,
-  'tablet': 960px,
+  'tablet': 521px,
+  'desktop': 961px,
 );
 
 @mixin break($breakpoint) {
-  @media all and (max-width: map-get($breakpoints, $breakpoint)) {
+  @media all and (min-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }
 }
@@ -25,7 +25,7 @@ $color-sea: (
   '300': #7096F8,
   '200': #9DB7F9,
   '100': #C5D7FB,
-  '50':  #E8F1FE,
+  '50': #E8F1FE,
 );
 
 $color-sumi: (
@@ -38,7 +38,7 @@ $color-sumi: (
   '300': #D8D8DB,
   '200': #E8E8EB,
   '100': #F1F1F4,
-  '50':  #F8F8FB,
+  '50': #F8F8FB,
 );
 
 $color-forest: (
@@ -51,7 +51,7 @@ $color-forest: (
   '300': #71C598,
   '200': #9BD4B5,
   '100': #C2E5D1,
-  '50':  #E6F5EC,
+  '50': #E6F5EC,
 );
 
 $color-wood: (
@@ -64,7 +64,7 @@ $color-wood: (
   '300': #DCAC4D,
   '200': #E1C383,
   '100': #E7D8B9,
-  '50':  #F3EEE5,
+  '50': #F3EEE5,
 );
 
 $color-sun: (
@@ -77,81 +77,81 @@ $color-sun: (
   '300': #FF7B5C,
   '200': #FFA28B,
   '100': #FFC8B8,
-  '50':  #FFE7E6,
+  '50': #FFE7E6,
 );
 
-$foreground-body:        map-get($color-sumi, '900');
+$foreground-body: map-get($color-sumi, '900');
 $foreground-description: map-get($color-sumi, '700');
-$foreground-link:        map-get($color-sea, '800');
-$foreground-hover:       map-get($color-sea, '900');
+$foreground-link: map-get($color-sea, '800');
+$foreground-hover: map-get($color-sea, '900');
 
-$background-primary:     map-get($color-white, '1000');
-$background-secondary:   map-get($color-sumi, '100');
-$background-tertiary:    map-get($color-sumi, '50');
+$background-primary: map-get($color-white, '1000');
+$background-secondary: map-get($color-sumi, '100');
+$background-tertiary: map-get($color-sumi, '50');
 
-$border-divider:         #D8D8DB;
+$border-divider: #D8D8DB;
 
 $font-weights: (
-  'header-XXL':        400,
-  'header-XL':         400,
-  'header-L':          400,
-  'header-L-mobile':   500,
-  'header-M':          400,
-  'header-M-mobile':   500,
-  'header-S':          400,
-  'header-S-mobile':   500,
-  'header-XS':         400,
-  'header-XS-mobile':  500,
-  'header-XXS':        400,
+  'header-XXL': 400,
+  'header-XL': 400,
+  'header-L': 400,
+  'header-L-mobile': 500,
+  'header-M': 400,
+  'header-M-mobile': 500,
+  'header-S': 400,
+  'header-S-mobile': 500,
+  'header-XS': 400,
+  'header-XS-mobile': 500,
+  'header-XXS': 400,
   'header-XXS-mobile': 500,
 
-  'text-L':            400,
-  'text-M':            400,
+  'text-L': 400,
+  'text-M': 400,
 
-  'label-L':           500,
-  'label-M':           500,
+  'label-L': 500,
+  'label-M': 500,
 );
 
 $font-sizes: (
-  'header-XXL':        57px,
-  'header-XL':         45px,
-  'header-L':          36px,
-  'header-L-mobile':   32px,
-  'header-M':          32px,
-  'header-M-mobile':   28px,
-  'header-S':          28px,
-  'header-S-mobile':   24px,
-  'header-XS':         24px,
-  'header-XS-mobile':  20px,
-  'header-XXS':        20px,
+  'header-XXL': 57px,
+  'header-XL': 45px,
+  'header-L': 36px,
+  'header-L-mobile': 32px,
+  'header-M': 32px,
+  'header-M-mobile': 28px,
+  'header-S': 28px,
+  'header-S-mobile': 24px,
+  'header-XS': 24px,
+  'header-XS-mobile': 20px,
+  'header-XXS': 20px,
   'header-XXS-mobile': 16px,
 
-  'text-L':            16px,
-  'text-M':            14px,
+  'text-L': 16px,
+  'text-M': 14px,
 
-  'label-L':           14px,
-  'label-M':           12px,
+  'label-L': 14px,
+  'label-M': 12px,
 );
 
 $line-heights: (
-  'header-XXL':        1.4,
-  'header-XL':         1.4,
-  'header-L':          1.4,
-  'header-L-mobile':   1.5,
-  'header-M':          1.5,
-  'header-M-mobile':   1.5,
-  'header-S':          1.5,
-  'header-S-mobile':   1.5,
-  'header-XS':         1.5,
-  'header-XS-mobile':  1.5,
-  'header-XXS':        1.5,
+  'header-XXL': 1.4,
+  'header-XL': 1.4,
+  'header-L': 1.4,
+  'header-L-mobile': 1.5,
+  'header-M': 1.5,
+  'header-M-mobile': 1.5,
+  'header-S': 1.5,
+  'header-S-mobile': 1.5,
+  'header-XS': 1.5,
+  'header-XS-mobile': 1.5,
+  'header-XXS': 1.5,
   'header-XXS-mobile': 1.7,
 
-  'text-L':            1.7,
-  'text-M':            1.7,
+  'text-L': 1.7,
+  'text-M': 1.7,
 
-  'label-L':           1.5,
-  'label-M':           1.5,
+  'label-L': 1.5,
+  'label-M': 1.5,
 );
 
 @mixin font($size) {
@@ -196,17 +196,17 @@ html {
 }
 
 body {
-  padding: 0 40px;
-  color: $foreground-body;
+  padding: 0 16px;
   @include font('text-L');
+  color: $foreground-body;
 
   @include break('tablet') {
     display: block;
     padding: 0 32px;
   }
 
-  @include break('mobile') {
-    padding: 0 16px;
+  @include break('desktop') {
+    padding: 0 40px;
   }
 
   a {
@@ -222,10 +222,10 @@ body {
 
 main.container {
   margin: 0 auto;
-  padding: 32px 0;
+  padding: 16px 0;
   max-width: $max-width;
 
   @include break('tablet') {
-    padding: 16px 0;
+    padding: 32px 0;
   }
 }

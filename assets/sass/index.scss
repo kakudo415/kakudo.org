@@ -1,29 +1,27 @@
 @use 'global/shared';
 @use 'partials/header';
-@use 'partials/external-links';
 @use 'utility/document';
 
 main.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 32px;
+  @include shared.break('desktop') {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
 
-  @include shared.break('tablet') {
-    display: block;
-  }
+    div.content {
+      grid-column: span 9;
 
-  nav.breadcrumbs {
-    grid-column: span 12;
-    grid-row: 1 / 2;
-  }
+      &>:first-child {
+        margin-top: 0;
+      }
+    }
 
-  div.content {
-    grid-column: span 9;
-    grid-row: 2 / 3;
-  }
+    aside.external-links {
+      grid-column: span 3;
 
-  aside.external-links {
-    grid-column: span 3;
-    grid-row: 2 / 3;
+      &>:first-child {
+        margin-top: 0;
+      }
+    }
   }
 }

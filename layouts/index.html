@@ -6,7 +6,7 @@
 {{ define "main" }}
   {{ partial "header.html" . }}
   <main class="container">
-    <div class="document content">
+    <div class="content document">
       {{ .Content }}
       {{ range .Sections.ByWeight }}
         <h2>{{ .Title }}</h2>

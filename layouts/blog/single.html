@@ -7,7 +7,7 @@
   {{ partial "header.html" . }}
   <main class="container">
     {{ partial "breadcrumbs.html" . }}
-    <div class="document">
+    <div class="content document">
       <h1>{{ .Title }}</h1>
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年 1月 2日" }}</time>
       {{ .Content }}  

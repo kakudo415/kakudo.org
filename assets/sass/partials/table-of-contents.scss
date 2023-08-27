@@ -1,19 +1,7 @@
 @use 'global/shared';
 
 aside.table-of-contents {
-  grid-column: 10 / 13;
-  grid-row: 2 / 3;
-
-  height: calc(100vh - 64px);
   overflow-y: auto;
-
-  position: sticky;
-  margin: 4rem 0 0;
-  top: 2rem;
-
-  @include shared.break('tablet') {
-    display: none;
-  }
 
   nav {
     @include shared.font('text-M');

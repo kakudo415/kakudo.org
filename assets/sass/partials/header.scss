@@ -5,14 +5,22 @@ header.site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6rem;
+    height: 4rem;
     margin: 0 auto;
     max-width: 1440px;
+
+    @include shared.break('tablet') {
+      height: 6rem;
+    }
   }
 
   h1 {
-    @include shared.font('header-XS');
+    @include shared.font('header-XS-mobile');
     line-height: 2rem;
+
+    @include shared.break('tablet') {
+      @include shared.font('header-XS');
+    }
   }
 
   nav.header-menu {
@@ -23,29 +31,18 @@ header.site-header {
       flex-shrink: 0;
       display: block;
       margin-left: 0.5rem;
-      padding: 0 1rem;
+      padding: 0 0.5rem;
       line-height: 2rem;
-      font-weight: 500;
+      font-weight: normal;
 
-      @include shared.break('mobile') {
-        padding: 0 0.5rem;
-        font-weight: normal;
+      @include shared.break('tablet') {
+        padding: 0 1rem;
+        font-weight: 500;
       }
 
       &:hover {
         text-decoration: underline;
       }
-    }
-  }
-
-  @include shared.break('mobile') {
-    div {
-      padding: 1rem 0;
-      height: 4rem;
-    }
-
-    h1 {
-      @include shared.font('header-XS-mobile');
     }
   }
 }

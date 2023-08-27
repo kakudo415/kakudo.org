@@ -4,10 +4,10 @@
 .document {
   h1 {
     @include shared.spacing('h1');
-    @include shared.font('header-L');
+    @include shared.font('header-L-mobile');
 
-    @include shared.break('mobile') {
-      @include shared.font('header-L-mobile');
+    @include shared.break('tablet') {
+      @include shared.font('header-L');
     }
   }
 
@@ -19,37 +19,37 @@
 
   h2 {
     @include shared.spacing('h2');
-    @include shared.font('header-M');
+    @include shared.font('header-M-mobile');
 
-    @include shared.break('mobile') {
-      @include shared.font('header-M-mobile');
+    @include shared.break('tablet') {
+      @include shared.font('header-M');
     }
   }
 
   h3 {
     @include shared.spacing('h3');
-    @include shared.font('header-S');
+    @include shared.font('header-S-mobile');
 
-    @include shared.break('mobile') {
-      @include shared.font('header-S-mobile');
+    @include shared.break('tablet') {
+      @include shared.font('header-S');
     }
   }
 
   h4 {
     @include shared.spacing('h4');
-    @include shared.font('header-XS');
+    @include shared.font('header-XS-mobile');
 
-    @include shared.break('mobile') {
-      @include shared.font('header-XS-mobile');
+    @include shared.break('tablet') {
+      @include shared.font('header-XS');
     }
   }
 
   h5 {
     @include shared.spacing('h5');
-    @include shared.font('header-XXS');
+    @include shared.font('header-XXS-mobile');
 
-    @include shared.break('mobile') {
-      @include shared.font('header-XXS-mobile');
+    @include shared.break('tablet') {
+      @include shared.font('header-XXS');
     }
   }
 
