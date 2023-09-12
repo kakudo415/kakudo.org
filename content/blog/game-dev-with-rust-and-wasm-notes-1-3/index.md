@@ -1,9 +1,11 @@
 ---
-title: "O'Reilly『RustとWebAssemblyによるゲーム開発』の感想"
+title: "O'Reilly『RustとWebAssemblyによるゲーム開発』を進める（1-3章）"
 description: "『RustとWebAssemblyによるゲーム開発』の感想と、可能な限り要点の解説も試みる"
 thumbnail: "rhb.png"
 date: 2023-07-26T15:16:38+09:00
 draft: false
+aliases:
+  - /blog/review-game-development-with-rust-and-webassembly/
 ---
 
 これを買わずして何を買うという本、『[O'Reilly Japan - RustとWebAssemblyによるゲーム開発](https://www.oreilly.co.jp/books/9784814400393/)』が出ました。
@@ -13,10 +15,12 @@ draft: false
 著者と僕のリポジトリはそれぞれ以下の通りです。合わせてご覧ください。
 
 - [PacktPublishing/Game-Development-with-Rust-and-WebAssembly](https://github.com/PacktPublishing/Game-Development-with-Rust-and-WebAssembly)
-- [kakudo415/wasm-game-rs](https://github.com/kakudo415/wasm-game-rs)
+- [kakudo415/walk-the-dog](https://github.com/kakudo415/walk-the-dog)
 
 {{% remark "supplement" %}}
-やっと3章まで読み終わったところで、まだまだ書きかけです。
+シリーズ（になる予定）
+- 1-3章: この記事です
+- 4章: まだ
 {{% /remark %}}
 
 ## 構成
