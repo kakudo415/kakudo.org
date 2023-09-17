@@ -1,5 +1,5 @@
 ---
-title: "O'Reilly『RustとWebAssemblyによるゲーム開発』を進める（1-3章）"
+title: "O'Reilly『RustとWebAssemblyによるゲーム開発』を進める（1･2･3章）"
 description: "『RustとWebAssemblyによるゲーム開発』の感想と、可能な限り要点の解説も試みる"
 thumbnail: "rhb.png"
 date: 2023-07-26T15:16:38+09:00
@@ -18,12 +18,11 @@ aliases:
 - [kakudo415/walk-the-dog](https://github.com/kakudo415/walk-the-dog)
 
 {{% remark "supplement" %}}
-シリーズ（になる予定）
-- 1-3章: この記事です
-- 4章: まだ
+- 1･2･3章（この記事）
+- [4章](/blog/game-dev-with-rust-and-wasm-notes-4/)
 {{% /remark %}}
 
-## 構成
+## 本の構成
 
 この本は、『Walk the Dog』という横スクロールゲームを作りながら、どのようにゲームを制作するか学ぶものです。
 インクリメンタルな開発スタイルとなっているため、ある程度進むごとに段階に応じた何かができます。
@@ -36,7 +35,7 @@ aliases:
 
 なお、ある程度Rustが書けることが要求されますが、WebAssemblyについての事前知識は必要なさそうです。
 
-## 要点
+## 学んだこと
 
 ### JavaScriptにおけるメインループ
 
