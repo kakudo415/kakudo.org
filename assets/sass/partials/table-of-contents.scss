@@ -5,6 +5,7 @@ aside.table-of-contents {
 
   nav {
     @include shared.font('text-M');
+    word-break: auto-phrase;
 
     ul {
       list-style: none;
