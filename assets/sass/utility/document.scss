@@ -5,6 +5,7 @@
   h1 {
     @include shared.spacing('h1');
     @include shared.font('header-L-mobile');
+    word-break: auto-phrase;
 
     @include shared.break('tablet') {
       @include shared.font('header-L');
@@ -20,6 +21,7 @@
   h2 {
     @include shared.spacing('h2');
     @include shared.font('header-M-mobile');
+    word-break: auto-phrase;
 
     @include shared.break('tablet') {
       @include shared.font('header-M');
@@ -29,6 +31,7 @@
   h3 {
     @include shared.spacing('h3');
     @include shared.font('header-S-mobile');
+    word-break: auto-phrase;
 
     @include shared.break('tablet') {
       @include shared.font('header-S');
@@ -38,6 +41,7 @@
   h4 {
     @include shared.spacing('h4');
     @include shared.font('header-XS-mobile');
+    word-break: auto-phrase;
 
     @include shared.break('tablet') {
       @include shared.font('header-XS');
@@ -47,6 +51,7 @@
   h5 {
     @include shared.spacing('h5');
     @include shared.font('header-XXS-mobile');
+    word-break: auto-phrase;
 
     @include shared.break('tablet') {
       @include shared.font('header-XXS');

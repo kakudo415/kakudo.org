@@ -5,11 +5,10 @@ aside.table-of-contents {
 
   nav {
     @include shared.font('text-M');
+    word-break: auto-phrase;
 
     ul {
       list-style: none;
-      padding-left: 0.5em;
-      margin: 0 0 1em;
 
       li {
         margin: 0.5em 0;
@@ -21,7 +20,6 @@ aside.table-of-contents {
     }
 
     &>ul {
-      padding-left: 0;
       font-weight: bold;
 
       ul {
