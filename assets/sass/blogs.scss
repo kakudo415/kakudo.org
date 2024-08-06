@@ -2,3 +2,13 @@
 @use 'partials/header';
 @use 'partials/breadcrumbs';
 @use 'utility/document';
+
+main.container {
+  div.document {
+    font-feature-settings: 'calt', 'palt';
+  }
+
+  h2, h3 {
+    font-feature-settings: 'calt', 'palt', 'tnum';
+  }
+}

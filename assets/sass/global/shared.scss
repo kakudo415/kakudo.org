@@ -159,7 +159,6 @@ $line-heights: (
   font-size: map-get($font-sizes, $size);
   line-height: map-get($line-heights, $size);
   font-family: 'Inter', sans-serif;
-  font-feature-settings: 'calt', 'cv01', 'cv02', 'cv03', 'cv04', 'tnum';
 }
 
 $spacing: (
@@ -199,6 +198,7 @@ body {
   padding: 0 16px;
   @include font('text-L');
   color: $foreground-body;
+  font-feature-settings: 'calt', 'pkna';
 
   @include break('tablet') {
     display: block;

@@ -5,6 +5,7 @@ aside.table-of-contents {
 
   nav {
     @include shared.font('text-M');
+    font-feature-settings: 'calt', 'palt';
     word-break: auto-phrase;
 
     ul {
