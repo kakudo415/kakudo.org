@@ -1,5 +1,5 @@
 {{ define "extraHeads" }}
-  {{ $css := resources.Get "sass/index.scss" | resources.ToCSS (dict "transpiler" "dartsass" "outputStyle" "compressed") | resources.Fingerprint }}
+  {{ $css := resources.Get "sass/index.scss" | css.Sass (dict "transpiler" "dartsass" "outputStyle" "compressed") | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $css.Permalink }}">
 {{ end }}
 
