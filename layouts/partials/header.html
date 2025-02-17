@@ -5,7 +5,6 @@
     </h1>
     <nav class="header-menu">
       <a href="/about">About me</a>
-      <a href="/resume">Resume</a>
       {{ range .Site.Sections }}
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       {{ end}}

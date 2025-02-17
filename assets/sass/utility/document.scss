@@ -123,6 +123,7 @@
     display: block;
     max-width: fit-content;
     overflow-x: auto;
+    font-feature-settings: "tnum";
     white-space: nowrap;
     border-top: 1px solid shared.$border-divider;
     border-left: 1px solid shared.$border-divider;
