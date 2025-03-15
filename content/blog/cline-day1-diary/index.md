@@ -142,7 +142,7 @@ client.js:2 Warning: Prop `className` did not match. Server: "absolute inset-0 w
 この情報でちゃんと直った。
 Prism.jsについて何も知らないので、何が間違っていて、何が直ったのか正直わからない。
 
-[fix: Fix syntax highlighting in IREditor and type errors in CFGViewer · kakudo415/llvm-cfg@993e6bb](https://github.com/kakudo415/llvm-cfg/commit/993e6bb61173e35457d0b5877f09f41c4957d8a5) （Commitのタイミングを間違えたため、修正以外も含まれてしまっている）
+- [fix: Fix syntax highlighting in IREditor and type errors in CFGViewer · kakudo415/llvm-cfg@993e6bb](https://github.com/kakudo415/llvm-cfg/commit/993e6bb61173e35457d0b5877f09f41c4957d8a5) （Commitのタイミングを間違えたため、修正以外も含まれてしまっている）
 
 #### GitHub Actionsのエラー
 
@@ -178,15 +178,21 @@ $ gh api repos/actions/upload-pages-artifact/releases/latest --jq '.tag_name'
 
 ![ズレが無くなったスクリーンショット](screenshot-3.webp)
 
+- [style: Improve UI design for better readability and layout · kakudo415/llvm-cfg@5101497](https://github.com/kakudo415/llvm-cfg/commit/5101497c1df08d3b3a58e65508f0f17bcb60e389)
+
 #### 行番号の追加
 
 だいぶ良くなったので、新しい仕様を追加してみた。これくらいはお茶の子さいさい。
 
 ![行番号も追加してくれたスクリーンショット](screenshot-4.webp)
 
+- [feat: Improve UI with line numbers in editor and better node spacing … · kakudo415/llvm-cfg@4da266c](https://github.com/kakudo415/llvm-cfg/commit/4da266c19439a924190e3a04590f399fc930e4f8)
+
 ひとまずこれで完成とした。
 
 最後にMemory Bankを更新させる。ここまで占めてAPI利用料は8.73ドル。2025年3月16日現在1297円を高いと見るか安いと見るか。
+
+- [docs: Update Memory Bank and .clinerules with latest progress and UI … · kakudo415/llvm-cfg@9d5d12a](https://github.com/kakudo415/llvm-cfg/commit/9d5d12a474d8532c7d330f45956c5f36eca79d17)
 
 ## 改善できそうな点
 
