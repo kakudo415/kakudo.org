@@ -186,6 +186,8 @@ $ gh api repos/actions/upload-pages-artifact/releases/latest --jq '.tag_name'
 
 ひとまずこれで完成とした。
 
+最後にMemory Bankを更新させる。ここまで占めてAPI利用料は8.73ドル。2025年3月16日現在1297円を高いと見るか安いと見るか。
+
 ## 改善できそうな点
 
 Clineと開発していて不満に思った点を挙げる。
