@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  letter-spacing: 0.04em;
+}
+
+body {
+  font-feature-settings: 'calt', 'pkna';
+  padding: 0 16px;
+  color: #1A1A1C;
+}
+
+@media all and (min-width: 521px) {
+  body {
+    padding: 0 32px;
+  }
+}
+
+@media all and (min-width: 961px) {
+  body {
+    padding: 0 40px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 2px solid #CD820A;
+  outline-offset: -2px;
+}
+
+main.container {
+  margin: 0 auto;
+  padding: 16px 0;
+  max-width: 1024px;
+}
+
+@media all and (min-width: 521px) {
+  main.container {
+    padding: 32px 0;
+  }
+}
