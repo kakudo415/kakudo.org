@@ -6,8 +6,8 @@
 - **フレームワーク**: Next.js v15
 - **言語**: TypeScript
 - **スタイリング**: Panda CSS
-- **コンテンツ処理**: MDX + Contentlayer
-- **シンタックスハイライト**: rehype-pretty-code + shiki
+- **コンテンツ処理**: MDX（Next.js公式サポート）
+- **シンタックスハイライト**: rehype-pretty-code + shiki（予定）
 - **フォント**: Inter（Google Fonts）
 
 ### ビルド・デプロイ
@@ -89,24 +89,24 @@
 ```json
 {
   "dependencies": {
-    "next": "^15.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "contentlayer": "^0.3.0",
-    "next-contentlayer": "^0.3.0",
-    "date-fns": "^2.30.0",
-    "rehype-pretty-code": "^0.10.0",
-    "shiki": "^0.14.0"
+    "next": "^15.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@next/mdx": "^15.2.3",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@types/mdx": "^2.0.13",
+    "date-fns": "^2.30.0"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.15.0",
-    "typescript": "^5.0.0",
-    "@types/react": "^18.2.0",
-    "@types/node": "^20.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^15.0.0",
-    "postcss": "^8.0.0",
-    "autoprefixer": "^10.0.0"
+    "@pandacss/dev": "^0.53.2",
+    "typescript": "^5.8.2",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.3",
+    "prettier": "^3.5.3"
   }
 }
 ```
@@ -114,49 +114,66 @@
 ### Panda CSS設定
 ```typescript
 // panda.config.ts
-import { defineConfig } from "@pandacss/dev";
+import { defineConfig } from "@pandacss/dev"
 
 export default defineConfig({
-  // 基本設定
   preflight: true,
   include: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   exclude: [],
-
-  // 出力設定
   outdir: "styled-system",
-
-  // テーマ設定
   theme: {
     extend: {
       tokens: {
-        // カラートークン
         colors: {
-          // 既存のHugoサイトのカラースキームを反映
+          white: {
+            1000: { value: "#FFFFFF" }
+          },
+          sea: {
+            900: { value: "#000082" },
+            800: { value: "#0017C1" },
+            // 他の色も同様に定義
+          },
+          // 他のカラートークン
         },
-        // フォントトークン
         fonts: {
-          // 既存のHugoサイトのフォント設定を反映
+          body: { value: "'Inter', sans-serif" }
         },
-        // その他のトークン
+        sizes: {
+          maxWidth: { value: "1024px" }
+        }
+      },
+      breakpoints: {
+        tablet: "521px",
+        desktop: "961px"
+      },
+      semanticTokens: {
+        colors: {
+          foreground: {
+            body: { value: "{colors.sumi.900}" },
+            // 他のセマンティックカラー
+          },
+          // 他のセマンティックトークン
+        }
       }
     }
   }
-});
+})
 ```
 
 ### Next.js設定
 ```typescript
-// next.config.js
-const { withContentlayer } = require('next-contentlayer');
+// next.config.mjs
+import createMDX from '@next/mdx'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   images: { unoptimized: true },
-  // その他の設定
-};
+}
 
-module.exports = withContentlayer(nextConfig);
+const withMDX = createMDX({})
+
+export default withMDX(nextConfig)
 ```
 
 ## 移行における技術的考慮事項
@@ -180,3 +197,8 @@ module.exports = withContentlayer(nextConfig);
 - Next.jsのルーティングをHugoのURL構造に合わせる
 - 動的ルートパラメータの設定
 - リダイレクト設定（必要に応じて）
+
+### 5. MDXファイルの処理
+- フロントマターの抽出と処理
+- ファイルシステムからのMDXファイルの読み込み
+- 動的なブログ記事一覧の生成

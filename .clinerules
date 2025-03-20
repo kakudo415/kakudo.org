@@ -18,11 +18,42 @@
 - Follow standard Next.js project structure
 - Organize components logically
 - Separate page templates from reusable components
+- Use the following directory structure:
+  - `app/` - Next.js App Router pages and layouts
+  - `components/` - Reusable React components
+  - `components/layout/` - Layout components (Header, Footer, etc.)
+  - `components/ui/` - UI components (Breadcrumbs, Document, etc.)
+  - `content/` - MDX content files
+  - `styled-system/` - Generated Panda CSS files
+
+## Next.js Best Practices
+- Use App Router for all pages
+- Make page components async when using dynamic data
+- Use `await params` in dynamic route handlers
+- Implement `generateStaticParams()` for dynamic routes with SSG
+- Use server components by default, client components only when necessary
+- Leverage Next.js's built-in MDX support instead of third-party libraries
+
+## MDX Implementation
+- Use Next.js's official MDX support (`@next/mdx`)
+- Create custom MDX components in `mdx-components.tsx`
+- Store MDX content files in the `content/` directory
+- Implement proper frontmatter handling
+- Use rehype/remark plugins for additional functionality
+
+## Styling Approach
+- Use Panda CSS for styling
+- Define design tokens based on the original Hugo site
+- Use semantic tokens for consistent theming
+- Implement responsive designs using breakpoints
+- Use CSS patterns (flex, grid) for layout components
 
 ## Memory Bank Usage
 - Reference original Hugo site structure
 - Track mapping between Hugo templates and Next.js components
 - Maintain progress tracking for completed and pending tasks
+- Update activeContext.md after implementing major features
+- Keep techContext.md in sync with actual implementation details
 
 ## Commenting Guidelines
 ### Do:
