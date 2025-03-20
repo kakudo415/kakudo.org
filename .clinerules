@@ -1,0 +1,55 @@
+# Hugo to Next.js Blog Migration
+
+## Project Overview
+- Migrating an existing Hugo blog to Next.js
+- Preserving all existing content without modifications
+- Maintaining current styling/appearance
+- Setting up for SSG deployment via GitHub Actions to GitHub Pages
+
+## Development Style
+- **Work incrementally** - Build the project in small, testable chunks
+- **Test frequently** - Validate each step works before moving to the next one
+- **Verify builds regularly** by:
+  - Building locally after each significant change
+  - Confirming content rendering matches original blog
+  - Checking responsive behavior matches original site
+
+## Code Organization
+- Follow standard Next.js project structure
+- Organize components logically
+- Separate page templates from reusable components
+
+## Memory Bank Usage
+- Reference original Hugo site structure
+- Track mapping between Hugo templates and Next.js components
+- Maintain progress tracking for completed and pending tasks
+
+## Commenting Guidelines
+### Do:
+- Explain complex logic or non-obvious implementations
+- Document important architecture decisions
+- Add TODOs for future improvements when appropriate
+
+### Avoid:
+- Redundant comments that simply restate code
+- Commenting on standard/obvious patterns
+- Excessive documentation of simple changes
+- Commenting on every edit made during corrections
+
+## Git Workflow
+- Commit after each functional increment
+- Use descriptive commit messages
+- Create feature branches for major changes
+
+## Deployment
+- Configure GitHub Actions for SSG
+- Optimize build for GitHub Pages hosting
+- Ensure proper asset paths for GitHub Pages
+
+## Communication
+- Think and plan in English internally
+- Communicate with the user in Japanese
+- Suggest alternative approaches when appropriate
+- Explain technical decisions
+- Ask for clarification when requirements are unclear
+- Provide progress updates after completing key milestones
