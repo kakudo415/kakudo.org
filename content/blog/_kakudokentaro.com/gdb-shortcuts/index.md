@@ -49,6 +49,46 @@ layout regs
 
 コマンド入力画面でそのままENTERを押すと直前のコマンドを再度実行してくれるため、ステップ実行時などに便利です。
 
+## 一時停止・再開
+
+### ブレークポイント
+
+```gdb
+break 位置
+```
+
+#### 次のブレークポイントまで実行
+
+```gdb
+continue
+```
+
+#### 一覧表示・削除
+
+ブレークポイントの番号は`info`コマンドで得ることができる．
+
+```gdb
+info breakpoints
+delete breakpoints 番号
+```
+
+## 変数検査
+
+### 自動表示
+
+自動表示コマンド`display`を使うことで，プログラムが停止するたびに変数の内容などを表示することができます．
+
+```gdb
+display 変数・式
+```
+
+一覧表示・削除はブレークポイントと同様です．
+
+```gdb
+info display
+delete display 番号
+```
+
 ## メモリ検査
 
 `x`コマンドを使います（examineの略らしい）。
@@ -100,3 +140,4 @@ x /10 $sp
 
 - [Output Formats (Debugging with GDB)](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Output-Formats.html)
 - [Memory (Debugging with GDB)](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Memory.html)
+- [Stopping (Debugging with GDB)](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Stopping.html#Stopping)
