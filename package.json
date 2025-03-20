@@ -1,0 +1,43 @@
+{
+  "name": "kakudo.org",
+  "version": "1.0.0",
+  "description": "## Build",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "panda codegen",
+    "dev": "next dev",
+    "build": "panda codegen && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakudo415/kakudo.org.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kakudo415/kakudo.org/issues"
+  },
+  "homepage": "https://github.com/kakudo415/kakudo.org#readme",
+  "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.2.3",
+    "@types/mdx": "^2.0.13",
+    "next": "^15.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.53.2",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  }
+}
